@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3 uid="uid://cgwqbycbjrnq3"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_6ryjw"]
+[ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://astroid.tscn" id="2_4x0ag"]
+[ext_resource type="PackedScene" uid="uid://ba4bk0pdgpkm0" path="res://enemy_wasp.tscn" id="2_huqn3"]
+[ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://wasp.tscn" id="2_tlcn3"]
+[ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
+[ext_resource type="Texture2D" uid="uid://wwnrbmu8uv30" path="res://models/map/SpacePanoramas/panorama1.jpg" id="6_xqmi7"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_k8jvc"]
+panorama = ExtResource("6_xqmi7")
+
+[sub_resource type="Sky" id="Sky_rxvfn"]
+sky_material = SubResource("PanoramaSkyMaterial_k8jvc")
+
+[sub_resource type="Environment" id="Environment_rdi8r"]
+background_mode = 2
+sky = SubResource("Sky_rxvfn")
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_6ryjw")
+
+[node name="Player" type="Node3D" parent="."]
+
+[node name="Hud" parent="Player" instance=ExtResource("3_tlles")]
+
+[node name="Wasp" parent="Player" instance=ExtResource("2_tlcn3")]
+
+[node name="EnemyWasp" parent="." instance=ExtResource("2_huqn3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.1253)
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Astroid" parent="Map" instance=ExtResource("2_4x0ag")]
+transform = Transform3D(11.145, 0, 0, 0, 11.145, 0, 0, 0, 11.145, 0, 0, 81.4621)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 0, 16.1784, 9.92091)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_rdi8r")

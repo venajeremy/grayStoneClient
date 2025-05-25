@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://x3nf8sfi5bmx"]
+
+[ext_resource type="PackedScene" uid="uid://bj45c11f5l428" path="res://models/map/meteorite.glb" id="1_4x0yg"]
+[ext_resource type="Script" path="res://astroid.gd" id="1_s23vg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jwtin"]
+radius = 2.49146
+height = 7.37409
+
+[node name="Astroid" type="CharacterBody3D"]
+transform = Transform3D(15.275, 0, 0, 0, 15.275, 0, 0, 0, 15.275, 0, 0, 0)
+script = ExtResource("1_s23vg")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Sketchfab_Scene" parent="Pivot" instance=ExtResource("1_4x0yg")]
+
+[node name="Sketchfab_Scene" parent="Pivot/Sketchfab_Scene" instance=ExtResource("1_4x0yg")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_jwtin")

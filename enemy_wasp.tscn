@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://ba4bk0pdgpkm0"]
+
+[ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_i2lnw"]
+[ext_resource type="Script" path="res://Enemy.gd" id="1_y05dm"]
+[ext_resource type="Script" path="res://PrimaryHitbox.gd" id="3_1nwbj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_362nj"]
+size = Vector3(20, 10, 20)
+
+[sub_resource type="Animation" id="Animation_k14q1"]
+resource_name = "shoot"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dc7at"]
+_data = {
+"shoot": SubResource("Animation_k14q1")
+}
+
+[node name="EnemyWasp" type="Node3D"]
+script = ExtResource("1_y05dm")
+
+[node name="Ship" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.217583, 0.0315852, 0.705573)
+rotation_order = 3
+mesh = ExtResource("1_i2lnw")
+
+[node name="PrimaryHitbox" type="Area3D" parent="Ship" groups=["enemy"]]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.705573, -0.0315852, 0.217583)
+script = ExtResource("3_1nwbj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ship/PrimaryHitbox"]
+shape = SubResource("BoxShape3D_362nj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dc7at")
+}
+
+[node name="Gun1" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01474, -0.106525, -8.12831)
+target_position = Vector3(0, 0, -1)
+
+[node name="enemyAudio" type="Node3D" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="enemyAudio"]
+volume_db = 5.0
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="enemyAudio"]
+volume_db = 5.0
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="enemyAudio"]
+attenuation_model = 2
+volume_db = 5.0
+
+[connection signal="damaged" from="Ship/PrimaryHitbox" to="." method="_on_primary_hitbox_damaged"]

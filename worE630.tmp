@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgwqbycbjrnq3"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_6ryjw"]
+[ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://astroid.tscn" id="2_4x0ag"]
+[ext_resource type="PackedScene" uid="uid://ba4bk0pdgpkm0" path="res://enemy_wasp.tscn" id="2_huqn3"]
+[ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://wasp.tscn" id="2_tlcn3"]
+[ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
+[ext_resource type="PackedScene" uid="uid://dpafltptwwp6b" path="res://models/map/skybox/free_-_skybox_space_nebula.glb" id="3_w8wip"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_6ryjw")
+
+[node name="Player" type="Node3D" parent="."]
+
+[node name="Hud" parent="Player" instance=ExtResource("3_tlles")]
+
+[node name="Wasp" parent="Player" instance=ExtResource("2_tlcn3")]
+
+[node name="EnemyWasp" parent="." instance=ExtResource("2_huqn3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.1253)
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Astroid" parent="Map" instance=ExtResource("2_4x0ag")]
+transform = Transform3D(11.145, 0, 0, 0, 11.145, 0, 0, 0, 11.145, 0, 0, 81.4621)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 0, 16.1784, 9.92091)
+
+[node name="Skybox" parent="." instance=ExtResource("3_w8wip")]

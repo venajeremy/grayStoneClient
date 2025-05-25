@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://br75wkwv1hj7w"]
+
+[ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_fxj4o"]
+[ext_resource type="Script" path="res://Ship.gd" id="2_sfmbk"]
+
+[sub_resource type="Animation" id="Animation_k14q1"]
+resource_name = "shoot"
+length = 0.2
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ship:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dc7at"]
+_data = {
+"shoot": SubResource("Animation_k14q1")
+}
+
+[node name="Wasp" type="Node3D"]
+script = ExtResource("2_sfmbk")
+
+[node name="Ship" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+rotation_order = 3
+mesh = ExtResource("1_fxj4o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_dc7at")
+}
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.932)
+
+[node name="shipAudio" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="shipAudio"]
+volume_db = -11.0
+
+[node name="Guns" type="Node3D" parent="."]
+
+[node name="Gun1" type="RayCast3D" parent="Guns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23809, -0.145151, -8.90493)
+target_position = Vector3(0, 0, -1)
+
+[node name="Gun2" type="RayCast3D" parent="Guns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.238, -0.145, -8.905)
+target_position = Vector3(0, 0, -1)
+
+[node name="Gun3" type="RayCast3D" parent="Guns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.238, 0.18, -8.905)
+target_position = Vector3(0, 0, -1)
+
+[node name="Gun4" type="RayCast3D" parent="Guns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.23809, 0.179997, -8.90493)
+target_position = Vector3(0, 0, -1)
