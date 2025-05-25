@@ -18,7 +18,7 @@ sky_material = SubResource("PanoramaSkyMaterial_k8jvc")
 background_mode = 2
 sky = SubResource("Sky_rxvfn")
 
-[node name="Game" type="Node3D"]
+[node name="World" type="Node3D"]
 script = ExtResource("1_6ryjw")
 
 [node name="Player" type="Node3D" parent="."]
@@ -49,5 +49,3 @@ spawn_path = NodePath("../Network")
 
 [node name="Server" type="Node" parent="."]
 script = ExtResource("7_wq8ev")
-
-[connection signal="joinServer" from="Player/Hud" to="Server" method="_on_hud_join_server"]

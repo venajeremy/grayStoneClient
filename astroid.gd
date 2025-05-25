@@ -7,7 +7,7 @@ var rotationConstant = Vector3(rotationSpeed,0,0)
 func _ready():
 	velocity = Vector3(0,0,-movementSpeed)
 
-func _physics_process(delta):
+func _delta_physics_process():
 	rotation += rotationConstant
 	move_and_slide()
 	
