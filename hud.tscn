@@ -44,9 +44,19 @@ offset_right = 71.0
 offset_bottom = 28.0
 text = "Enter IP:"
 
-[node name="EnterIP2" type="Label" parent="."]
+[node name="JoinInd" type="Label" parent="."]
+layout_mode = 0
 offset_left = 7.0
 offset_top = 40.0
 offset_right = 72.0
 offset_bottom = 63.0
 text = "Press Enter To Join"
+
+[node name="CreateLobby" type="Label" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 67.0
+offset_right = 189.0
+offset_bottom = 90.0
+text = "Press \\ To Create Lobby
+"

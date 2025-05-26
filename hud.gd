@@ -1,6 +1,7 @@
 extends Control
 
 signal joinServer(ip)
+signal createServer()
 
 @onready var tempIPInput = $IPInput
 
@@ -9,5 +10,9 @@ func _ready():
 	tempIPInput.grab_focus()
 
 func _input(event):
+	if event.is_action_pressed("t"):
+		tempIPInput.grab_focus()
 	if event.is_action_pressed("enter"):
 		joinServer.emit(tempIPInput.text)
+	if event.is_action_pressed("backslash"):
+		createServer.emit()

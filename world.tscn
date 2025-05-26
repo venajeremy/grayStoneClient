@@ -1,9 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgwqbycbjrnq3"]
+[gd_scene load_steps=9 format=3 uid="uid://cgwqbycbjrnq3"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_6ryjw"]
 [ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://astroid.tscn" id="2_4x0ag"]
-[ext_resource type="PackedScene" uid="uid://ba4bk0pdgpkm0" path="res://enemy_wasp.tscn" id="2_huqn3"]
-[ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://wasp.tscn" id="2_tlcn3"]
+[ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://player.tscn" id="2_tlcn3"]
 [ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
 [ext_resource type="Texture2D" uid="uid://wwnrbmu8uv30" path="res://models/map/SpacePanoramas/panorama1.jpg" id="6_xqmi7"]
 [ext_resource type="Script" path="res://Server.gd" id="7_wq8ev"]
@@ -19,16 +17,6 @@ background_mode = 2
 sky = SubResource("Sky_rxvfn")
 
 [node name="Game" type="Node3D"]
-script = ExtResource("1_6ryjw")
-
-[node name="Player" type="Node3D" parent="."]
-
-[node name="Hud" parent="Player" instance=ExtResource("3_tlles")]
-
-[node name="Wasp" parent="Player" instance=ExtResource("2_tlcn3")]
-
-[node name="EnemyWasp" parent="." instance=ExtResource("2_huqn3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.1253)
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -41,13 +29,15 @@ transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rdi8r")
 
-[node name="Network" type="Node" parent="."]
-
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("res://enemy_wasp.tscn")
-spawn_path = NodePath("../Network")
-
-[node name="Server" type="Node" parent="."]
+[node name="Server" type="Node3D" parent="."]
 script = ExtResource("7_wq8ev")
+player_scene = ExtResource("2_tlcn3")
 
-[connection signal="joinServer" from="Player/Hud" to="Server" method="_on_hud_join_server"]
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Server"]
+_spawnable_scenes = PackedStringArray("res://player.tscn")
+spawn_path = NodePath("..")
+
+[node name="Hud" parent="." instance=ExtResource("3_tlles")]
+
+[connection signal="createServer" from="Hud" to="Server" method="_on_hud_create_server"]
+[connection signal="joinServer" from="Hud" to="Server" method="_on_hud_join_server"]
