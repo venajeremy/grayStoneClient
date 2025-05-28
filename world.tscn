@@ -17,6 +17,7 @@ sky_material = SubResource("PanoramaSkyMaterial_k8jvc")
 background_mode = 2
 sky = SubResource("Sky_rxvfn")
 
+<<<<<<< Updated upstream
 [node name="World" type="Node3D"]
 script = ExtResource("1_6ryjw")
 
@@ -28,6 +29,10 @@ script = ExtResource("1_6ryjw")
 
 [node name="EnemyWasp" parent="." instance=ExtResource("2_huqn3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -35.1253)
+=======
+[node name="Game" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00788212, -0.00887895, 0.00410271)
+>>>>>>> Stashed changes
 
 [node name="Map" type="Node3D" parent="."]
 

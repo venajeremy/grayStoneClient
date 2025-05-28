@@ -1,15 +1,7 @@
-<<<<<<< Updated upstream:wasp.tscn
-[gd_scene load_steps=6 format=3 uid="uid://br75wkwv1hj7w"]
-=======
-[gd_scene load_steps=11 format=3 uid="uid://br75wkwv1hj7w"]
->>>>>>> Stashed changes:player.tscn
+[gd_scene load_steps=9 format=3 uid="uid://br75wkwv1hj7w"]
 
 [ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_fxj4o"]
 [ext_resource type="Script" path="res://Ship.gd" id="2_sfmbk"]
-[ext_resource type="Script" path="res://CameraParentWorkaround.gd" id="3_qhntm"]
-[ext_resource type="Script" path="res://pointing_vector.gd" id="3_yd4fg"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_81p3d"]
 
 [sub_resource type="Animation" id="Animation_k14q1"]
 resource_name = "shoot"
@@ -36,8 +28,6 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbe2d"]
 size = Vector3(1, 4.79495, 12.8964)
 
-<<<<<<< Updated upstream:wasp.tscn
-=======
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_5i73q"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
@@ -48,7 +38,8 @@ properties/1/replication_mode = 1
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ox028"]
 
->>>>>>> Stashed changes:player.tscn
+[sub_resource type="CylinderMesh" id="CylinderMesh_81p3d"]
+
 [node name="Wasp" type="CharacterBody3D"]
 script = ExtResource("2_sfmbk")
 
@@ -56,16 +47,6 @@ script = ExtResource("2_sfmbk")
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 rotation_order = 3
 mesh = ExtResource("1_fxj4o")
-
-[node name="Target Node" type="Node3D" parent="Ship"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.03786, -3.8147e-06, -31.5677)
-
-[node name="Pointing Vector" type="MeshInstance3D" parent="Ship"]
-transform = Transform3D(5.11457e-05, 1.41249, -0.000239842, 0.00016153, 0.014669, 0.384714, 0.384715, -0.0031355, -0.000161001, 0.398009, 1.39645, 0.165349)
-visible = false
-mesh = SubResource("CylinderMesh_81p3d")
-skeleton = NodePath("../../Direction of movement")
-script = ExtResource("3_yd4fg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -121,80 +102,40 @@ volume_db = -11.0
 volume_db = -11.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.989006, 0.147878, 0, -0.147878, 0.989006, 0, 4.78221, 7.82257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.75245)
 fov = 91.0
-<<<<<<< Updated upstream:wasp.tscn
-=======
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_5i73q")
 
 [node name="Speed Axis Indicator" type="Node3D" parent="."]
-transform = Transform3D(0.57, 0, 0, 0, 0.57, 0, 0, 0, 0.57, 4.471, 2.226, 4.711)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16345, -2.71366, -16.802)
 
 [node name="+Z" type="Node3D" parent="Speed Axis Indicator"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.834, 0, 0, 0)
+transform = Transform3D(1.00435, 0, 0, 0, 1.00435, 0, 0, 0, 0.83706, 0, 0, 0)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Speed Axis Indicator/+Z"]
-transform = Transform3D(0.165, 0, 0, 0, -4.82574e-08, 0.165, 0, -1.104, -7.21238e-09, 0, 0, -1.1)
+transform = Transform3D(0.45, 0, 0, 0, -6.13408e-08, 0.45, 0, -1.40331, -1.96701e-08, 0, 0, -1.39427)
 mesh = SubResource("CylinderMesh_ox028")
 skeleton = NodePath("../..")
 
 [node name="+X" type="Node3D" parent="Speed Axis Indicator"]
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Speed Axis Indicator/+X"]
-transform = Transform3D(-3.49691e-09, 1.203, 6.11959e-09, 0, -5.25848e-08, 0.14, 0.08, 5.25848e-08, 2.67496e-16, 1.21509, 0, 0)
+transform = Transform3D(-1.96701e-08, 1.20284, 1.96701e-08, 0, -5.25779e-08, 0.45, 0.45, 5.25779e-08, -7.38913e-16, 1.21509, 0, 0)
 mesh = SubResource("CylinderMesh_ox028")
 skeleton = NodePath("../..")
 
 [node name="+Y" type="Node3D" parent="Speed Axis Indicator"]
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Speed Axis Indicator/+Y"]
-transform = Transform3D(0.12, 0, 0, 0, -1.105, -1.35896e-08, 0, 1.6685e-07, -0.09, 0, 1.1, 0)
+transform = Transform3D(0.443124, 0, 0, 0, -1.1055, -3.87392e-08, 0, 9.66458e-08, -0.443124, 0, 1.25404, 0)
 mesh = SubResource("CylinderMesh_ox028")
 skeleton = NodePath("../..")
 
 [node name="Direction of movement" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.245, -11.414, -1.324, 0.953)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00401306, 0.00571179, -10.8968)
 
-[node name="Direction Mesh" type="MeshInstance3D" parent="Direction of movement"]
-transform = Transform3D(0.384715, -0.00313557, -0.000161001, 0.00016153, 0.014669, 0.384714, -0.000208827, -5.76526, 0.000978947, 0.000851536, -0.00398372, -5.62831)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Direction of movement"]
+transform = Transform3D(0.384715, 0, 0, 0, -2.52008e-07, 0.384715, 0, -5.76528, -1.68164e-08, 0, -2.9413, -7.19396)
 mesh = SubResource("CylinderMesh_81p3d")
-
-[node name="Node3D" type="Node3D" parent="."]
-visible = false
-
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 919.0
-offset_top = 517.0
-offset_right = 1152.0
-offset_bottom = 648.0
-metadata/_edit_use_anchors_ = true
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-metadata/_edit_use_anchors_ = true
-
-[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(233, 131)
-render_target_update_mode = 0
-
-[node name="Camera3D" type="Camera3D" parent="Control/SubViewportContainer/SubViewport" node_paths=PackedStringArray("target_node")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -31.2358, 0, -0.991278)
-visible = false
-script = ExtResource("3_qhntm")
-target_node = NodePath("../../../../Ship/Target Node")
->>>>>>> Stashed changes:player.tscn
