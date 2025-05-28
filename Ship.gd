@@ -69,7 +69,7 @@ func _physics_process(delta):
 		if Input.is_action_pressed("e"):
 			rotate_object_local(Vector3(0,0,1),deg_to_rad(rotationSensitivity))
 		if Input.is_action_pressed("lmb"):
-			_fire()
+			_fire.rpc()
 		if Input.is_action_pressed("esc"):
 			$"../".exit_game(name.to_int())
 			get_tree().quit()
@@ -91,6 +91,7 @@ func _play_sound(sound):
 			player.play()
 			break
 
+@rpc("any_peer", "call_local", "reliable", 0)
 func _fire():
 	if !gun_anim.is_playing():
 			# Play Animation
@@ -113,4 +114,4 @@ func _fire():
 			if(gunSelected>=gunCount):
 				gunSelected=0;
 			
-			get_parent().add_child(instance)
+			get_parent().add_child(instance, true)
