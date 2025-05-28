@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 const speed = 100
 const trustMult = 5
+const velocityCap = 500
 const sensitivity = -0.04
 const rotationSensitivity = -5
 var acceleration = Vector3()
@@ -73,7 +74,11 @@ func _physics_process(delta):
 			$"../".exit_game(name.to_int())
 			get_tree().quit()
 		
+		
 		velocity += acceleration
+		if(velocity.length() > velocityCap):
+			velocity = (velocity/velocity.length())*velocityCap
+		
 		move_and_slide()
 
 

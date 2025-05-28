@@ -1,14 +1,15 @@
 extends Node
 
-const port = 7000
+const port = 64775
 
 @export var player_scene: PackedScene
 
 var peer = ENetMultiplayerPeer.new()
 
-
 func _on_hud_create_server():
-	peer.create_server(port)
+	var error = peer.create_server(port)
+	if error:
+		return error
 	multiplayer.multiplayer_peer = peer
 	multiplayer.peer_connected.connect(_add_player)
 	_add_player() # Add Host to lobby
