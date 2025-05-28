@@ -34,6 +34,7 @@ offset_left = 76.0
 offset_top = 4.0
 offset_right = 200.0
 offset_bottom = 35.0
+max_length = 200
 virtual_keyboard_type = 2
 
 [node name="EnterIP" type="Label" parent="."]

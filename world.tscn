@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://player.tscn" id="2_tlcn3"]
 [ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
 [ext_resource type="Texture2D" uid="uid://wwnrbmu8uv30" path="res://models/map/SpacePanoramas/panorama1.jpg" id="6_xqmi7"]
-[ext_resource type="Script" path="res://Server.gd" id="7_wq8ev"]
+[ext_resource type="Script" path="res://Multiplayer.gd" id="7_wq8ev"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_k8jvc"]
 panorama = ExtResource("6_xqmi7")
@@ -29,15 +29,16 @@ transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rdi8r")
 
-[node name="Server" type="Node3D" parent="."]
+[node name="Multiplayer" type="Node3D" parent="."]
 script = ExtResource("7_wq8ev")
 player_scene = ExtResource("2_tlcn3")
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Server"]
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Multiplayer"]
 _spawnable_scenes = PackedStringArray("res://player.tscn", "res://bullet.tscn")
 spawn_path = NodePath("..")
 
 [node name="Hud" parent="." instance=ExtResource("3_tlles")]
 
-[connection signal="createServer" from="Hud" to="Server" method="_on_hud_create_server"]
-[connection signal="joinServer" from="Hud" to="Server" method="_on_hud_join_server"]
+[connection signal="createServer" from="Hud" to="Multiplayer" method="_on_hud_create_server"]
+[connection signal="createServer" from="Hud" to="Hud" method="_on_create_server"]
+[connection signal="joinServer" from="Hud" to="Multiplayer" method="_on_hud_join_server"]
