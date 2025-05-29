@@ -17,7 +17,20 @@ config/icon="res://icon.svg"
 
 [dotnet]
 
+<<<<<<< Updated upstream
 project/assembly_name="entropy"
+=======
+Noray="*res://addons/netfox.noray/noray.gd"
+PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
+
+[dotnet]
+
+project/assembly_name="entropy"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg")
+>>>>>>> Stashed changes
 
 [input]
 

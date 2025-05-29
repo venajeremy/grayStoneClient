@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream:plaB786.tmp
 [gd_scene load_steps=9 format=3 uid="uid://br75wkwv1hj7w"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://br75wkwv1hj7w"]
+>>>>>>> Stashed changes:player.tscn
 
 [ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_fxj4o"]
 [ext_resource type="Script" path="res://Ship.gd" id="2_sfmbk"]
+[ext_resource type="PackedScene" uid="uid://oumffycjl1qj" path="res://models/Blender Link/Wasp Ship_LIVE.blend" id="3_cajou"]
 
 [sub_resource type="Animation" id="Animation_k14q1"]
 resource_name = "shoot"
@@ -46,6 +51,7 @@ script = ExtResource("2_sfmbk")
 [node name="Ship" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 rotation_order = 3
+visible = false
 mesh = ExtResource("1_fxj4o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -102,12 +108,13 @@ volume_db = -11.0
 volume_db = -11.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.75245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.139428, 0.714905, -13.733)
 fov = 91.0
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_5i73q")
 
+<<<<<<< Updated upstream:plaB786.tmp
 [node name="Speed Axis Indicator" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16345, -2.71366, -16.802)
 
@@ -139,3 +146,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00401306, 0.00571179, -10.
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Direction of movement"]
 transform = Transform3D(0.384715, 0, 0, 0, -2.52008e-07, 0.384715, 0, -5.76528, -1.68164e-08, 0, -2.9413, -7.19396)
 mesh = SubResource("CylinderMesh_81p3d")
+=======
+[node name="Wasp Ship_LIVE" parent="." instance=ExtResource("3_cajou")]
+>>>>>>> Stashed changes:player.tscn
