@@ -13,6 +13,7 @@ var angularAcceleration = Vector3()
 @onready var cam = $Camera3D
 @onready var guns = $Guns.get_children()
 @onready var gun_anim = $AnimationPlayer
+@onready var state = $State
 var gunSelected = 0
 @onready var gunCount = guns.size()
 
@@ -47,39 +48,46 @@ func _input(event):
 
 
 func _physics_process(delta):
-	if is_multiplayer_authority():
-		acceleration = Vector3(0,0,0)
-		# Handle input
-		if Input.is_action_pressed("w"):
-			acceleration += -speed*transform.basis.z * delta
-		if Input.is_action_pressed("s"):
-			acceleration += speed*transform.basis.z * delta
-		if Input.is_action_pressed("d"):
-			acceleration += speed*transform.basis.x * delta
-		if Input.is_action_pressed("a"):
-			acceleration += -speed*transform.basis.x * delta
-		if Input.is_action_pressed("space"):
-			acceleration += speed*transform.basis.y * delta
-		if Input.is_action_pressed("ctrl"):
-			acceleration += -speed*transform.basis.y * delta
-		if Input.is_action_pressed("shift"):
-			acceleration += acceleration*trustMult
-		if Input.is_action_pressed("q"):
-			rotate_object_local(Vector3(0,0,1),deg_to_rad(-rotationSensitivity))
-		if Input.is_action_pressed("e"):
-			rotate_object_local(Vector3(0,0,1),deg_to_rad(rotationSensitivity))
-		if Input.is_action_pressed("lmb"):
-			_fire.rpc()
-		if Input.is_action_pressed("esc"):
-			$"../".exit_game(name.to_int())
-			get_tree().quit()
+	if get_multiplayer_authority() != multiplayer.get_unique_id():
+		global_position = state.sync_position
+		global_rotation = state.sync_rotation
+		return
+	
+	acceleration = Vector3(0,0,0)
+	# Handle input
+	if Input.is_action_pressed("w"):
+		acceleration += -speed*transform.basis.z * delta
+	if Input.is_action_pressed("s"):
+		acceleration += speed*transform.basis.z * delta
+	if Input.is_action_pressed("d"):
+		acceleration += speed*transform.basis.x * delta
+	if Input.is_action_pressed("a"):
+		acceleration += -speed*transform.basis.x * delta
+	if Input.is_action_pressed("space"):
+		acceleration += speed*transform.basis.y * delta
+	if Input.is_action_pressed("ctrl"):
+		acceleration += -speed*transform.basis.y * delta
+	if Input.is_action_pressed("shift"):
+		acceleration += acceleration*trustMult
+	if Input.is_action_pressed("q"):
+		rotate_object_local(Vector3(0,0,1),deg_to_rad(-rotationSensitivity))
+	if Input.is_action_pressed("e"):
+		rotate_object_local(Vector3(0,0,1),deg_to_rad(rotationSensitivity))
+	if Input.is_action_pressed("lmb"):
+		_fire.rpc()
+	if Input.is_action_pressed("esc"):
+		$"../".exit_game(name.to_int())
+		get_tree().quit()
 		
 		
-		velocity += acceleration
-		if(velocity.length() > velocityCap):
-			velocity = (velocity/velocity.length())*velocityCap
-		
-		move_and_slide()
+	velocity += acceleration
+	if(velocity.length() > velocityCap):
+		velocity = (velocity/velocity.length())*velocityCap
+	
+	move_and_slide()
+	
+	state.sync_position = global_position
+	state.sync_rotation = global_rotation
 
 
 
