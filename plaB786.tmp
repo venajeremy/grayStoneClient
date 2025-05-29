@@ -1,5 +1,9 @@
 <<<<<<< Updated upstream:plaB786.tmp
+<<<<<<< Updated upstream:plaB786.tmp
 [gd_scene load_steps=9 format=3 uid="uid://br75wkwv1hj7w"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://br75wkwv1hj7w"]
+>>>>>>> Stashed changes:player.tscn
 =======
 [gd_scene load_steps=8 format=3 uid="uid://br75wkwv1hj7w"]
 >>>>>>> Stashed changes:player.tscn
@@ -115,6 +119,7 @@ fov = 91.0
 replication_config = SubResource("SceneReplicationConfig_5i73q")
 
 <<<<<<< Updated upstream:plaB786.tmp
+<<<<<<< Updated upstream:plaB786.tmp
 [node name="Speed Axis Indicator" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16345, -2.71366, -16.802)
 
@@ -146,6 +151,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00401306, 0.00571179, -10.
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Direction of movement"]
 transform = Transform3D(0.384715, 0, 0, 0, -2.52008e-07, 0.384715, 0, -5.76528, -1.68164e-08, 0, -2.9413, -7.19396)
 mesh = SubResource("CylinderMesh_81p3d")
+=======
+[node name="Wasp Ship_LIVE" parent="." instance=ExtResource("3_cajou")]
+>>>>>>> Stashed changes:player.tscn
 =======
 [node name="Wasp Ship_LIVE" parent="." instance=ExtResource("3_cajou")]
 >>>>>>> Stashed changes:player.tscn
