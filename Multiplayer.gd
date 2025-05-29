@@ -2,8 +2,9 @@ extends Node
 
 signal noray_connected
 
-const NORAY_ADDRESS = "tomfol.io"
+const NORAY_ADDRESS = "104.237.145.37"
 const NORAY_PORT = 8890
+const doNATPunchthrough = false
 
 var is_host = false
 var external_oid = ""
@@ -41,7 +42,11 @@ func _on_hud_create_server():
 	host()
 
 func join(oid):
-	Noray.connect_nat(oid)
+	#If NAT fails or if NAT is disabled relay will be used
+	if doNATPunchthrough:
+		Noray.connect_nat(oid)
+	else:
+		Noray.connect_relay(oid)
 	external_oid = oid
 
 func _on_hud_join_server(oid):
