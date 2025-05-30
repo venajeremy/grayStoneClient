@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://x3nf8sfi5bmx"]
 
 [ext_resource type="PackedScene" uid="uid://bj45c11f5l428" path="res://models/map/meteorite.glb" id="1_4x0yg"]
-[ext_resource type="Script" path="res://astroid.gd" id="1_s23vg"]
+[ext_resource type="Script" uid="uid://dxcgst6lbhw1q" path="res://astroid.gd" id="1_s23vg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jwtin"]
 radius = 2.49146

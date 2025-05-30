@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ba4bk0pdgpkm0"]
 
 [ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_i2lnw"]
-[ext_resource type="Script" path="res://Enemy.gd" id="1_y05dm"]
-[ext_resource type="Script" path="res://PrimaryHitbox.gd" id="3_1nwbj"]
+[ext_resource type="Script" uid="uid://bupxg84h7a8ul" path="res://Enemy.gd" id="1_y05dm"]
+[ext_resource type="Script" uid="uid://ca6ti5ma2s5wb" path="res://PrimaryHitbox.gd" id="3_1nwbj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_362nj"]
 size = Vector3(20, 10, 20)
@@ -26,7 +26,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dc7at"]
 _data = {
-"shoot": SubResource("Animation_k14q1")
+&"shoot": SubResource("Animation_k14q1")
 }
 
 [node name="EnemyWasp" type="Node3D"]

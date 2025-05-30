@@ -1,7 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://br75wkwv1hj7w"]
+[gd_scene load_steps=8 format=3 uid="uid://br75wkwv1hj7w"]
 
 [ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_fxj4o"]
-[ext_resource type="Script" uid="uid://buu1yrppqebwp" path="res://Ship.gd" id="2_sfmbk"]
+[ext_resource type="Script" path="res://State.gd" id="2_ps4w0"]
+[ext_resource type="Script" path="res://Ship.gd" id="2_sfmbk"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_5i73q"]
+properties/0/path = NodePath("State:sync_rotation")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("State:sync_position")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [sub_resource type="Animation" id="Animation_k14q1"]
 resource_name = "shoot"
@@ -22,22 +31,21 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dc7at"]
 _data = {
-&"shoot": SubResource("Animation_k14q1")
+"shoot": SubResource("Animation_k14q1")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbe2d"]
 size = Vector3(1, 4.79495, 12.8964)
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_5i73q"]
-properties/0/path = NodePath(".:position")
-properties/0/spawn = true
-properties/0/replication_mode = 1
-properties/1/path = NodePath(".:rotation")
-properties/1/spawn = true
-properties/1/replication_mode = 1
-
 [node name="Wasp" type="CharacterBody3D"]
 script = ExtResource("2_sfmbk")
+
+[node name="State" type="Node" parent="."]
+script = ExtResource("2_ps4w0")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="State"]
+root_path = NodePath("../..")
+replication_config = SubResource("SceneReplicationConfig_5i73q")
 
 [node name="Ship" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -46,7 +54,7 @@ mesh = ExtResource("1_fxj4o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_dc7at")
+"": SubResource("AnimationLibrary_dc7at")
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -100,6 +108,3 @@ volume_db = -11.0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.75245)
 fov = 91.0
-
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_5i73q")

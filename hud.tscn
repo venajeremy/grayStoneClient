@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ib12772p21tl"]
 
-[ext_resource type="Script" path="res://hud.gd" id="1_rhcvb"]
+[ext_resource type="Script" uid="uid://bjfv8qtyss7yu" path="res://hud.gd" id="1_rhcvb"]
 [ext_resource type="Texture2D" uid="uid://clj74mtsi24bw" path="res://textures/crosshair1.png" id="1_u5cfq"]
 
 [node name="Control" type="Control"]

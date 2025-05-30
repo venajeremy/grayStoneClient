@@ -13,7 +13,6 @@ var angularAcceleration = Vector3()
 @onready var cam = $Camera3D
 @onready var guns = $Guns.get_children()
 @onready var gun_anim = $AnimationPlayer
-@onready var state = $State
 var gunSelected = 0
 @onready var gunCount = guns.size()
 
@@ -32,14 +31,12 @@ var bullet = load("res://bullet.tscn")
 var instance
 
 func _enter_tree():
-	set_multiplayer_authority(name.to_int())
+	set_multiplayer_authority(name.to_int(), true)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	cam.current = is_multiplayer_authority()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -48,9 +45,7 @@ func _input(event):
 
 
 func _physics_process(delta):
-	if get_multiplayer_authority() != multiplayer.get_unique_id():
-		global_position = state.sync_position
-		global_rotation = state.sync_rotation
+	if !is_multiplayer_authority():
 		return
 	
 	acceleration = Vector3(0,0,0)
@@ -78,18 +73,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("esc"):
 		$"../".exit_game(name.to_int())
 		get_tree().quit()
-		
-		
+	
+	
 	velocity += acceleration
 	if(velocity.length() > velocityCap):
 		velocity = (velocity/velocity.length())*velocityCap
 	
 	move_and_slide()
-	
-	state.sync_position = global_position
-	state.sync_rotation = global_rotation
-
-
 
 
 func _play_sound(sound):

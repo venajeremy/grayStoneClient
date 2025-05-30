@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://player.tscn" id="2_tlcn3"]
 [ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
 [ext_resource type="Texture2D" uid="uid://wwnrbmu8uv30" path="res://models/map/SpacePanoramas/panorama1.jpg" id="6_xqmi7"]
-[ext_resource type="Script" path="res://Multiplayer.gd" id="7_wq8ev"]
+[ext_resource type="Script" uid="uid://bog0im36qiow1" path="res://Multiplayer.gd" id="7_wq8ev"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_k8jvc"]
 panorama = ExtResource("6_xqmi7")
@@ -34,7 +34,7 @@ script = ExtResource("7_wq8ev")
 player_scene = ExtResource("2_tlcn3")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Multiplayer"]
-_spawnable_scenes = PackedStringArray("res://player.tscn")
+_spawnable_scenes = PackedStringArray("uid://br75wkwv1hj7w")
 spawn_path = NodePath("..")
 
 [node name="Hud" parent="." instance=ExtResource("3_tlles")]
