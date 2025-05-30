@@ -1,10 +1,18 @@
 extends CharacterBody3D
 
-const speed = 100
-const trustMult = 5
+# Ship Parameters
+const speed = 200
+const accelerationDecayRate = 3
 const velocityCap = 500
+const accelerationCap = 100
+const straifeMultiplier = 0.75
+
+const thrusterBoostSpeed = 30
 const sensitivity = -0.04
 const rotationSensitivity = -5
+
+
+# Physics Variables
 var acceleration = Vector3()
 var angularVelocity = Vector3()
 var angularAcceleration = Vector3()
@@ -55,15 +63,15 @@ func _physics_process(delta):
 	if Input.is_action_pressed("s"):
 		acceleration += speed*transform.basis.z * delta
 	if Input.is_action_pressed("d"):
-		acceleration += speed*transform.basis.x * delta
+		acceleration += straifeMultiplier*speed*transform.basis.x * delta
 	if Input.is_action_pressed("a"):
-		acceleration += -speed*transform.basis.x * delta
+		acceleration += -straifeMultiplier*speed*transform.basis.x * delta
 	if Input.is_action_pressed("space"):
-		acceleration += speed*transform.basis.y * delta
+		acceleration += straifeMultiplier*speed*transform.basis.y * delta
 	if Input.is_action_pressed("ctrl"):
-		acceleration += -speed*transform.basis.y * delta
+		acceleration += -straifeMultiplier*speed*transform.basis.y * delta
 	if Input.is_action_pressed("shift"):
-		acceleration += acceleration*trustMult
+		acceleration = -thrusterBoostSpeed*transform.basis.z
 	if Input.is_action_pressed("q"):
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(-rotationSensitivity))
 	if Input.is_action_pressed("e"):
@@ -75,6 +83,11 @@ func _physics_process(delta):
 		get_tree().quit()
 	
 	
+	# Soft Acceleration cap
+	if(acceleration.length() > accelerationCap):
+		acceleration = acceleration/(accelerationDecayRate*delta);
+	
+	# Hard Velocity cap
 	velocity += acceleration
 	if(velocity.length() > velocityCap):
 		velocity = (velocity/velocity.length())*velocityCap

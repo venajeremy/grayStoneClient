@@ -46,7 +46,7 @@ shape = SubResource("BoxShape3D_362nj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_dc7at")
+&"": SubResource("AnimationLibrary_dc7at")
 }
 
 [node name="Gun1" type="RayCast3D" parent="."]

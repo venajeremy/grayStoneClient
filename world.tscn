@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://cgwqbycbjrnq3"]
 
 [ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://astroid.tscn" id="2_4x0ag"]
+[ext_resource type="Texture2D" uid="uid://dkyx7fqi5icck" path="res://models/map/SpacePanoramas/panorama5.jpg" id="2_036b0"]
 [ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://player.tscn" id="2_tlcn3"]
 [ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
-[ext_resource type="Texture2D" uid="uid://wwnrbmu8uv30" path="res://models/map/SpacePanoramas/panorama1.jpg" id="6_xqmi7"]
 [ext_resource type="Script" uid="uid://bog0im36qiow1" path="res://Multiplayer.gd" id="7_wq8ev"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_k8jvc"]
-panorama = ExtResource("6_xqmi7")
+panorama = ExtResource("2_036b0")
 
 [sub_resource type="Sky" id="Sky_rxvfn"]
 sky_material = SubResource("PanoramaSkyMaterial_k8jvc")
@@ -21,7 +21,7 @@ sky = SubResource("Sky_rxvfn")
 [node name="Map" type="Node3D" parent="."]
 
 [node name="Astroid" parent="Map" instance=ExtResource("2_4x0ag")]
-transform = Transform3D(11.145, 0, 0, 0, 11.145, 0, 0, 0, 11.145, 0, 0, 81.4621)
+transform = Transform3D(11.145, 0, 0, 0, 11.145, 0, 0, 0, 11.145, 0, 0, -148.548)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 0, 16.1784, 9.92091)

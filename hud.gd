@@ -14,5 +14,6 @@ func _input(event):
 		tempIPInput.grab_focus()
 	if event.is_action_pressed("enter"):
 		joinServer.emit(tempIPInput.text)
+		tempIPInput.hide()
 	if event.is_action_pressed("backslash"):
 		createServer.emit()

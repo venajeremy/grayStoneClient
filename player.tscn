@@ -59,29 +59,11 @@ target_position = Vector3(0, 0, -1)
 
 [node name="shipAudio" type="Node3D" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
-
-[node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="shipAudio"]
-volume_db = -11.0
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="shipAudio"]
+volume_db = -10.275
+max_distance = 4096.0
+attenuation_filter_cutoff_hz = 20500.0
+attenuation_filter_db = 0.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312106, -6.41058)
