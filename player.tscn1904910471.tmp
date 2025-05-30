@@ -50,7 +50,7 @@ libraries = {
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(9.0794, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.168)
 shape = SubResource("BoxShape3D_lbe2d")
 
 [node name="Guns" type="Node3D" parent="."]
