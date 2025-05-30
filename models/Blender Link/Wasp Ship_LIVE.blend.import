@@ -3,7 +3,11 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 uid="uid://oumffycjl1qj"
+=======
+uid="uid://ceq4s7uyhvpsb"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Wasp Ship_LIVE.blend-62cc427fcd5b21fb0df868a42cc59ca5.scn"
 
 [deps]
