@@ -1,13 +1,13 @@
 extends CharacterBody3D
 
 # Ship Parameters
-const speed = 200
+const speed = 400
 const accelerationDecayRate = 3
 const velocityCap = 500
 const accelerationCap = 100
 const straifeMultiplier = 0.75
 
-const thrusterBoostSpeed = 30
+const thrusterBoostSpeed = 50
 const sensitivity = -0.04
 const rotationSensitivity = -5
 
@@ -17,7 +17,16 @@ var acceleration = Vector3()
 var angularVelocity = Vector3()
 var angularAcceleration = Vector3()
 
-# Ship components
+# Ship Utility Creation
+
+
+# Ship Utility Equipted
+
+var utilityBack = [burstThrusterID, null]
+var utilityFront = [null, null]
+var utilitySide = [null, null]
+
+# Ship Components
 @onready var cam = $Camera3D
 @onready var guns = $Guns.get_children()
 @onready var gun_anim = $AnimationPlayer
@@ -71,7 +80,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ctrl"):
 		acceleration += -straifeMultiplier*speed*transform.basis.y * delta
 	if Input.is_action_pressed("shift"):
-		acceleration = -thrusterBoostSpeed*transform.basis.z
+		_handle_utility(utilityBack[0])
 	if Input.is_action_pressed("q"):
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(-rotationSensitivity))
 	if Input.is_action_pressed("e"):
@@ -92,8 +101,25 @@ func _physics_process(delta):
 	if(velocity.length() > velocityCap):
 		velocity = (velocity/velocity.length())*velocityCap
 	
+	# Recharge Utility
+	_recharge_utility(delta)
+	
 	move_and_slide()
 
+# Manages ship utility actions
+func _handle_utility(utilityID):
+	if utilityID==burstThrusterID:# Is burst thruster equipt?
+		if burstThrusterCurrentCharge > 1/burstThrusterCount:# Do we have ammo?
+			# Remove ammo
+			burstThrusterCurrentCharge = 1/burstThrusterCount
+			# Apply thruster boost
+			acceleration = -thrusterBoostSpeed*transform.basis.z
+	
+
+# Manages recharging ship utility
+func _recharge_utility(delta):
+	for i in utilityBack:
+		pass
 
 func _play_sound(sound):
 	for player in shipAudio.get_children():
@@ -104,6 +130,10 @@ func _play_sound(sound):
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _fire():
+	pass
+
+@rpc("any_peer", "call_local", "reliable", 0)
+func _fire_bullet():
 	if !gun_anim.is_playing():
 			# Play Animation
 			gun_anim.play("shoot")

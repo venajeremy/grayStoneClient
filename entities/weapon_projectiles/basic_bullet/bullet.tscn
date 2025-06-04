@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://djp4g5w5ku7ia"]
 
-[ext_resource type="Script" uid="uid://c8l5ukhtf1bql" path="res://bullet.gd" id="1_ru2ls"]
+[ext_resource type="Script" uid="uid://c8l5ukhtf1bql" path="res://entities/weapon_projectiles/basic_bullet/bullet.gd" id="1_5o8mv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_71xvy"]
 radius = 0.2
@@ -28,7 +28,7 @@ gravity = Vector3(0, 0, 0)
 size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Bullet" type="Node3D"]
-script = ExtResource("1_ru2ls")
+script = ExtResource("1_5o8mv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)

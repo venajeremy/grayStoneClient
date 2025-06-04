@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cgwqbycbjrnq3"]
+[gd_scene load_steps=10 format=3 uid="uid://cgwqbycbjrnq3"]
 
-[ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://astroid.tscn" id="2_4x0ag"]
-[ext_resource type="Texture2D" uid="uid://dkyx7fqi5icck" path="res://models/map/SpacePanoramas/panorama5.jpg" id="2_036b0"]
-[ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://player.tscn" id="2_tlcn3"]
-[ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
-[ext_resource type="Script" uid="uid://bog0im36qiow1" path="res://Multiplayer.gd" id="7_wq8ev"]
+[ext_resource type="Script" uid="uid://bkxd2x2o7jg7" path="res://scenes/map.gd" id="1_qfnet"]
+[ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://entities/world_objects/astroid/astroid.tscn" id="2_i7141"]
+[ext_resource type="Texture2D" uid="uid://dkyx7fqi5icck" path="res://models/map/SpacePanoramas/panorama5.jpg" id="3_4mrxx"]
+[ext_resource type="Script" uid="uid://bog0im36qiow1" path="res://globals/multiplayer.gd" id="4_7r4gi"]
+[ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://entities/player/player.tscn" id="5_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://ui/hud.tscn" id="6_e3hyu"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_k8jvc"]
-panorama = ExtResource("2_036b0")
+panorama = ExtResource("3_4mrxx")
 
 [sub_resource type="Sky" id="Sky_rxvfn"]
 sky_material = SubResource("PanoramaSkyMaterial_k8jvc")
@@ -19,9 +20,8 @@ sky = SubResource("Sky_rxvfn")
 [node name="Game" type="Node3D"]
 
 [node name="Map" type="Node3D" parent="."]
-
-[node name="Astroid" parent="Map" instance=ExtResource("2_4x0ag")]
-transform = Transform3D(11.145, 0, 0, 0, 11.145, 0, 0, 0, 11.145, 0, 0, -148.548)
+script = ExtResource("1_qfnet")
+astroid_scene = ExtResource("2_i7141")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 0, 16.1784, 9.92091)
@@ -30,14 +30,14 @@ transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 
 environment = SubResource("Environment_rdi8r")
 
 [node name="Multiplayer" type="Node3D" parent="."]
-script = ExtResource("7_wq8ev")
-player_scene = ExtResource("2_tlcn3")
+script = ExtResource("4_7r4gi")
+player_scene = ExtResource("5_w7kh3")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Multiplayer"]
 _spawnable_scenes = PackedStringArray("uid://br75wkwv1hj7w")
 spawn_path = NodePath("..")
 
-[node name="Hud" parent="." instance=ExtResource("3_tlles")]
+[node name="Hud" parent="." instance=ExtResource("6_e3hyu")]
 
 [connection signal="createServer" from="Hud" to="Multiplayer" method="_on_hud_create_server"]
 [connection signal="createServer" from="Hud" to="Hud" method="_on_create_server"]

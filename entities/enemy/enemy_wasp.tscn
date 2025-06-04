@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ba4bk0pdgpkm0"]
 
 [ext_resource type="ArrayMesh" uid="uid://cbo7tlfoyqmbk" path="res://models/ship.obj" id="1_i2lnw"]
-[ext_resource type="Script" uid="uid://bupxg84h7a8ul" path="res://Enemy.gd" id="1_y05dm"]
-[ext_resource type="Script" uid="uid://ca6ti5ma2s5wb" path="res://PrimaryHitbox.gd" id="3_1nwbj"]
+[ext_resource type="Script" uid="uid://bupxg84h7a8ul" path="res://entities/enemy/enemy.gd" id="1_y05dm"]
+[ext_resource type="Script" uid="uid://ca6ti5ma2s5wb" path="res://entities/enemy/primary_hitbox.gd" id="3_1nwbj"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_362nj"]
 size = Vector3(20, 10, 20)

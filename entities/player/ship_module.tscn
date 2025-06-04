@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5k50bpa5scvq"]
+
+[ext_resource type="Script" uid="uid://tl3s7c5111sm" path="res://entities/player/ship_module.gd" id="1_gmbvs"]
+
+[node name="shipModule" type="Node"]
+script = ExtResource("1_gmbvs")
