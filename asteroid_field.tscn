@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1k0log1euqao"]
+
+[ext_resource type="PackedScene" uid="uid://e2wiwmb4pktq" path="res://models/Blender Files/Asteroid Field Objects_LIVE.blend" id="1_4rkk8"]
+
+[node name="Asteroid Field" type="Node3D"]
+
+[node name="Asteroid Field Objects_LIVE" parent="." instance=ExtResource("1_4rkk8")]
+
+[editable path="Asteroid Field Objects_LIVE"]

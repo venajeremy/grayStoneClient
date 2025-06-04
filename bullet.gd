@@ -1,8 +1,7 @@
 extends Node3D
 
-const SPEED = 800.0
-
-@onready var mesh = $MeshInstance3D
+const SPEED = 800.0*2
+@onready var mesh: MeshInstance3D = $"Bullet Mesh"
 @onready var ray = $BulletRayCast
 @onready var particles = $GPUParticles3D
 

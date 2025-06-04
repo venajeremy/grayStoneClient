@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0j3msvssxhd4"]
+
+[ext_resource type="PackedScene" uid="uid://bu2fv77apnb0y" path="res://models/Blender Files/Asteroid Particle Sys_BAKED_LIVE.blend" id="1_irijx"]
+
+[node name="Asteroid Particle System" type="Node3D"]
+
+[node name="Asteroid Particle Sys_BAKED_LIVE" parent="." instance=ExtResource("1_irijx")]
+transform = Transform3D(11.005, 0, 0, 0, 11.005, 0, 0, 0, 11.005, 0, 0, -1509.1)
+
+[editable path="Asteroid Particle Sys_BAKED_LIVE"]

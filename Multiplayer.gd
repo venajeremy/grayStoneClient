@@ -1,7 +1,7 @@
 extends Node
 
 const port = 47908
-const localport = 9999
+const localport = 47908
 
 @export var player_scene: PackedScene
 

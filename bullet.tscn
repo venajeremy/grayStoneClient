@@ -1,16 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://djp4g5w5ku7ia"]
+[gd_scene load_steps=8 format=3 uid="uid://djp4g5w5ku7ia"]
 
 [ext_resource type="Script" uid="uid://c8l5ukhtf1bql" path="res://bullet.gd" id="1_ru2ls"]
+[ext_resource type="Shader" uid="uid://b6p3stk7x1fgr" path="res://bullet1Shader.tres" id="2_v8qja"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_71xvy"]
 radius = 0.2
 height = 8.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f5rh3"]
-albedo_color = Color(0.755853, 0.180172, 0, 1)
-emission_enabled = true
-emission = Color(1, 0, 0, 1)
-emission_energy_multiplier = 5.0
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t4vbm"]
+render_priority = 0
+shader = ExtResource("2_v8qja")
+shader_parameter/Bullet_Color = Color(100, 22.652, 4.972, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgo1f"]
 albedo_color = Color(0.821263, 0, 0.0471864, 1)
@@ -30,10 +30,10 @@ size = Vector3(0.1, 0.1, 0.1)
 [node name="Bullet" type="Node3D"]
 script = ExtResource("1_ru2ls")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+[node name="Bullet Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -9.43646e-08, -1, 0, 2.15881, -4.37114e-08, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_71xvy")
-surface_material_override/0 = SubResource("StandardMaterial3D_f5rh3")
+surface_material_override/0 = SubResource("ShaderMaterial_t4vbm")
 
 [node name="BulletRayCast" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.86539)
@@ -54,3 +54,12 @@ draw_pass_1 = SubResource("BoxMesh_o0wnj")
 wait_time = 10.0
 one_shot = true
 autostart = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.917382, 0.656627, 0.219924, 1)
+light_energy = 100.0
+light_indirect_energy = 16.0
+light_size = 0.365
+light_specular = 0.907
+omni_range = 6.0
+omni_attenuation = 1.992

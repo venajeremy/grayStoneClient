@@ -9,6 +9,13 @@ var acceleration = Vector3()
 var angularVelocity = Vector3()
 var angularAcceleration = Vector3()
 
+
+# Boost settings
+@export var base_acceleration = 100.0
+@export var boost_multiplier = 300.0
+var pre_boost_velocity = Vector3.ZERO
+var is_boosting = false
+
 # Ship components
 @onready var cam = $Camera3D
 @onready var guns = $Guns.get_children()
@@ -49,6 +56,8 @@ func _physics_process(delta):
 		return
 	
 	acceleration = Vector3(0,0,0)
+	var frame_start_velocity = velocity
+	
 	# Handle input
 	if Input.is_action_pressed("w"):
 		acceleration += -speed*transform.basis.z * delta
@@ -62,8 +71,6 @@ func _physics_process(delta):
 		acceleration += speed*transform.basis.y * delta
 	if Input.is_action_pressed("ctrl"):
 		acceleration += -speed*transform.basis.y * delta
-	if Input.is_action_pressed("shift"):
-		acceleration += acceleration*trustMult
 	if Input.is_action_pressed("q"):
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(-rotationSensitivity))
 	if Input.is_action_pressed("e"):
@@ -74,12 +81,30 @@ func _physics_process(delta):
 		$"../".exit_game(name.to_int())
 		get_tree().quit()
 	
+	# BOOST SYSTEM
+	if Input.is_action_just_pressed("shift"):
+		# Store pre-boost velocity
+		pre_boost_velocity = frame_start_velocity
+		is_boosting = true
+		
+		# Calculate boost direction (always forward where you're facing)
+		var boost_direction = -transform.basis.z.normalized()
+		
+		# Apply boost in facing direction while maintaining original speed
+		velocity = boost_direction * pre_boost_velocity.length() * boost_multiplier
 	
+	if Input.is_action_just_released("shift"):
+		is_boosting = false
+		# Optionally apply some braking here if needed
+
 	velocity += acceleration
 	if(velocity.length() > velocityCap):
 		velocity = (velocity/velocity.length())*velocityCap
 	
+	
 	move_and_slide()
+	
+	
 
 
 func _play_sound(sound):
