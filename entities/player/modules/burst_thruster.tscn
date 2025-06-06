@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://vaho858admxg"]
-
-[ext_resource type="Script" uid="uid://c5c5y52o616am" path="res://entities/player/modules/burst_thruster.gd" id="1_ghmo6"]
-
-[node name="BurstThruster" type="Node3D"]
-script = ExtResource("1_ghmo6")
