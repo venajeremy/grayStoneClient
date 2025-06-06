@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://yiaanroy36d0"]
+
+[ext_resource type="Script" uid="uid://bq61r54lxjtwk" path="res://orbitl_vector_field.gd" id="1_7mrtt"]
+
+[node name="Orbitl Vector Field" type="Node3D"]
+script = ExtResource("1_7mrtt")

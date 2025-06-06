@@ -1,0 +1,12 @@
+# Blender 4.2.10 LTS MTL File: 'Asteroid Field Objects_LIVE.blend'
+# www.blender.org
+
+newmtl Asteroid_Material_Pixelated.004
+Ns 2.975208
+Ka 1.000000 1.000000 1.000000
+Kd 0.276873 0.276873 0.276873
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2

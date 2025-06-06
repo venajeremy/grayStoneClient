@@ -1,7 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://b0j3msvssxhd4"]
+[gd_scene load_steps=12 format=3 uid="uid://nxjasr76iape"]
 
-[ext_resource type="ArrayMesh" uid="uid://5mlxsn8ot5ut" path="res://models/map/Asteroids/Ast1.obj" id="1_qi1lj"]
-[ext_resource type="Script" uid="uid://lok2eudtimh1" path="res://Asteroid_Field_Particles.gd" id="2_qi1lj"]
+[ext_resource type="ArrayMesh" uid="uid://5mlxsn8ot5ut" path="res://models/map/Asteroids/Ast1.obj" id="1_34k7r"]
+[ext_resource type="Script" uid="uid://lok2eudtimh1" path="res://Asteroid_Field_Particles.gd" id="2_sg2ca"]
 
 [sub_resource type="Curve" id="Curve_qi1lj"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -13,18 +13,18 @@ curve = SubResource("Curve_qi1lj")
 
 [sub_resource type="Curve" id="Curve_togl1"]
 _limits = [-2.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0.025), 0.0, 0.0, 0, 0]
-point_count = 1
+_data = [Vector2(0, 0.025), 0.0, 0.0, 0, 0, Vector2(0.994, -0.025), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Curve" id="Curve_b16p0"]
 _limits = [-2.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0.025), 0.0, 0.0, 0, 0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0]
 point_count = 1
 
 [sub_resource type="Curve" id="Curve_qgdb6"]
 _limits = [-2.0, 2.0, 0.0, 1.0]
-_data = [Vector2(0, 0.055), 0.0, 0.0, 0, 0]
-point_count = 1
+_data = [Vector2(0, -0.025), 0.0, 0.0, 0, 0, Vector2(0.994, 0.025), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CurveXYZTexture" id="CurveXYZTexture_ue7av"]
 curve_x = SubResource("Curve_togl1")
@@ -46,16 +46,16 @@ emission_sphere_radius = 272.4
 angle_min = -720.0
 angle_max = 720.0
 spread = 180.0
-orbit_velocity_min = -1.0
-orbit_velocity_max = 1.0
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 0.1
 orbit_velocity_curve = SubResource("CurveXYZTexture_ue7av")
 radial_velocity_min = -2.23517e-05
 radial_velocity_max = -2.23517e-05
 gravity = Vector3(0, 0, 0)
 linear_accel_min = -2.23517e-06
 linear_accel_max = -2.23517e-06
-radial_accel_min = -5.0
-radial_accel_max = -5.0
+radial_accel_min = -15.0
+radial_accel_max = -15.0
 tangential_accel_min = 15.0
 tangential_accel_max = 15.0
 damping_min = 15.0
@@ -75,16 +75,16 @@ turbulence_initial_displacement_max = 28.9
 [node name="Asteroid Particle System" type="Node3D"]
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-amount = 500
+amount = 1000
 lifetime = 184.95
-speed_scale = 0.1
+preprocess = 50.0
 explosiveness = 1.0
 randomness = 1.0
 fixed_fps = 400
 collision_base_size = 0.0
 process_material = SubResource("ParticleProcessMaterial_togl1")
-draw_pass_1 = ExtResource("1_qi1lj")
-script = ExtResource("2_qi1lj")
+draw_pass_1 = ExtResource("1_34k7r")
+script = ExtResource("2_sg2ca")
 
 [node name="GPUParticlesAttractorVectorField3D" type="GPUParticlesAttractorVectorField3D" parent="GPUParticles3D"]
 visible = false
