@@ -17,6 +17,7 @@ func _ready():
 
 func _on_hud_create_server(port = 9999):
 	print("Creating Server On Port: "+str(port))
+	peer.close() # Delete if current peer incase user already tried to join server
 	var error = peer.create_server(port)
 	if error:
 		createServerStatus.emit(error)

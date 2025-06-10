@@ -7,7 +7,7 @@ const velocityCap = 700
 const accelerationCap = 100
 const straifeMultiplier = 0.75
 
-const thrusterBoostSpeed = 50
+const thrusterBoostSpeed = 100
 const sensitivity = -0.04
 const rotationSensitivity = -5
 
@@ -29,9 +29,15 @@ var utilityPositions = [utilityBack, utilityFront, utilitySide]
 # Ship Components
 @onready var cam = $Camera3D
 @onready var guns = $Guns.get_children()
-@onready var gun_anim = $AnimationPlayer
 var gunSelected = 0
 @onready var gunCount = guns.size()
+
+# UI
+@onready var shipUI = $ShipUi
+
+# Animations
+@onready var gunAnim = $Animations/Gun
+@onready var thrusterAnim = $Animations/Thruster
 
 # Sounds
 @onready var shipAudio = $shipAudio
@@ -116,13 +122,17 @@ func _physics_process(delta):
 # Manages ship utility actions
 func _handle_utility(utilityUsed):
 	if utilityUsed==burstThruster:# Is burst thruster equipt?
-		if utilityUsed.currentCharge > 1/utilityUsed.useCount:# Do we have ammo?
-			
-			# Remove ammo
-			utilityUsed.currentCharge -= 1.0/utilityUsed.useCount
-			
-			# Apply thruster boost
-			acceleration = -thrusterBoostSpeed*transform.basis.z
+		if !thrusterAnim.is_playing():
+			if utilityUsed.currentCharge > 1.0/utilityUsed.useCount:# Do we have ammo?
+				
+				# Player thruster animation
+				thrusterAnim.play("thruster")
+				
+				# Remove ammo
+				utilityUsed.currentCharge -= 1.0/utilityUsed.useCount
+				
+				# Apply thruster boost
+				acceleration = -thrusterBoostSpeed*transform.basis.z
 
 # Manages recharging all ship utilities
 func _recharge_all_utilities(delta):
@@ -130,10 +140,15 @@ func _recharge_all_utilities(delta):
 		if utilityArea != null:
 			for utility in utilityArea:
 				_recharge_utility(utility, delta)
+	_refresh_ui()
+
+func _refresh_ui():
+	shipUI.BottomLeftUtility.value = int(utilityBack[0].currentCharge * 100)
 
 func _recharge_utility(utility, timePassed):
 	if utility != null:
-		utility.currentCharge += utility.regenTime * timePassed
+		if utility.currentCharge < 1.0:
+			utility.currentCharge += utility.regenTime * timePassed
 
 func _play_sound(sound):
 	for player in shipAudio.get_children():
@@ -148,9 +163,9 @@ func _fire():
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _fire_bullet():
-	if !gun_anim.is_playing():
+	if !gunAnim.is_playing():
 			# Play Animation
-			gun_anim.play("shoot")
+			gunAnim.play("shoot")
 			
 			# Play Sound
 			var rng = RandomNumberGenerator.new()

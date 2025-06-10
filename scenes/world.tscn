@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgwqbycbjrnq3"]
+[gd_scene load_steps=11 format=3 uid="uid://cgwqbycbjrnq3"]
 
 [ext_resource type="Script" uid="uid://bkxd2x2o7jg7" path="res://scenes/map.gd" id="1_qfnet"]
 [ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://entities/world_objects/astroid/astroid.tscn" id="2_i7141"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://entities/player/player.tscn" id="5_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://ui/join_host_menu.tscn" id="6_e3hyu"]
 [ext_resource type="Script" uid="uid://bkhiokpe77l1x" path="res://scenes/user_interface.gd" id="6_i7141"]
-[ext_resource type="PackedScene" uid="uid://cb7wxf8f6fbc" path="res://ui/ship_ui.tscn" id="8_4mrxx"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_k8jvc"]
 panorama = ExtResource("3_4mrxx")
@@ -51,13 +50,6 @@ layout_mode = 1
 offset_top = -4.0
 offset_right = 1110.0
 offset_bottom = 603.0
-
-[node name="ShipUi" parent="User Interface" instance=ExtResource("8_4mrxx")]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 28.75
-anchor_bottom = 16.075
-offset_right = -0.00012207
 
 [connection signal="createServerStatus" from="Multiplayer" to="User Interface" method="_on_multiplayer_create_server_status"]
 [connection signal="createServerSuccess" from="Multiplayer" to="User Interface" method="_on_multiplayer_create_server_success"]

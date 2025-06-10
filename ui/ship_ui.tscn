@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb7wxf8f6fbc"]
+[gd_scene load_steps=3 format=3 uid="uid://cb7wxf8f6fbc"]
 
+[ext_resource type="Script" uid="uid://mcge5yd5bicm" path="res://ui/ship_ui.gd" id="1_4ks6e"]
 [ext_resource type="Texture2D" uid="uid://clj74mtsi24bw" path="res://textures/crosshair1.png" id="1_g5b62"]
 
 [node name="ShipUi" type="Control"]
@@ -9,8 +10,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4ks6e")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Crosshair" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,3 +27,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_g5b62")
 stretch_mode = 2
+
+[node name="utilityUI1" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 586.0
+offset_right = 231.0
+offset_bottom = 635.0

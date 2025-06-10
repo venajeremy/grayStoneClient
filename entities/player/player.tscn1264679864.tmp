@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://br75wkwv1hj7w"]
+[gd_scene load_steps=8 format=3 uid="uid://br75wkwv1hj7w"]
 
 [ext_resource type="PackedScene" uid="uid://bq1le8ct280eo" path="res://models/Blender Files/Wasp Ship_LIVE.blend" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://buu1yrppqebwp" path="res://entities/player/player.gd" id="2_sfmbk"]
-[ext_resource type="AudioStream" uid="uid://cf67mqd0tpl05" path="res://audio/wasp/movement/burstThrust.wav" id="3_bls4j"]
 [ext_resource type="PackedScene" uid="uid://cb7wxf8f6fbc" path="res://ui/ship_ui.tscn" id="3_sglur"]
 
 [sub_resource type="Animation" id="Animation_k14q1"]
@@ -13,30 +12,6 @@ step = 0.01
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dc7at"]
 _data = {
 &"shoot": SubResource("Animation_k14q1")
-}
-
-[sub_resource type="Animation" id="Animation_sglur"]
-resource_name = "thruster"
-length = 0.75
-tracks/0/type = "audio"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../shipAudio/AudioStreamPlayer3D")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("3_bls4j")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/0/use_blend = true
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bls4j"]
-_data = {
-&"thruster": SubResource("Animation_sglur")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbe2d"]
@@ -56,17 +31,9 @@ script = ExtResource("2_sfmbk")
 [node name="Wasp Ship_LIVE" parent="." instance=ExtResource("2_onrkg")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
-[node name="Animations" type="Node" parent="."]
-
-[node name="Gun" type="AnimationPlayer" parent="Animations"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_dc7at")
-}
-
-[node name="Thruster" type="AnimationPlayer" parent="Animations"]
-libraries = {
-&"": SubResource("AnimationLibrary_bls4j")
 }
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
