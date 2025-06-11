@@ -82,11 +82,7 @@ explosiveness = 1.0
 randomness = 1.0
 fixed_fps = 400
 collision_base_size = 0.0
+visibility_aabb = AABB(-4, -4, -4, 500, 500, 500)
 process_material = SubResource("ParticleProcessMaterial_togl1")
 draw_pass_1 = ExtResource("1_qi1lj")
 script = ExtResource("2_qi1lj")
-
-[node name="GPUParticlesAttractorVectorField3D" type="GPUParticlesAttractorVectorField3D" parent="GPUParticles3D"]
-visible = false
-strength = 0.0
-size = Vector3(100, 100, 100)

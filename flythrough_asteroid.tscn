@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5kjamryvsvyu"]
+
+[ext_resource type="PackedScene" uid="uid://5x3esp0br2c0" path="res://models/Blender Files/FlythroughAsteroid_1.blend" id="1_63j2n"]
+
+[node name="Flythrough Asteroid" type="Node3D"]
+
+[node name="FlythroughAsteroid_1" parent="." instance=ExtResource("1_63j2n")]
+
+[editable path="FlythroughAsteroid_1"]

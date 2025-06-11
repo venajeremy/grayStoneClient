@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgwqbycbjrnq3"]
+[gd_scene load_steps=14 format=3 uid="uid://cgwqbycbjrnq3"]
 
 [ext_resource type="PackedScene" uid="uid://x3nf8sfi5bmx" path="res://astroid.tscn" id="2_4x0ag"]
 [ext_resource type="PackedScene" uid="uid://br75wkwv1hj7w" path="res://player.tscn" id="2_tlcn3"]
 [ext_resource type="PackedScene" uid="uid://nxjasr76iape" path="res://asteroid_particle_system_ring.tscn" id="3_gbfbk"]
 [ext_resource type="PackedScene" uid="uid://b0j3msvssxhd4" path="res://asteroid_particle_system.tscn" id="3_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://ib12772p21tl" path="res://hud.tscn" id="3_tlles"]
+[ext_resource type="PackedScene" uid="uid://5x3esp0br2c0" path="res://models/Blender Files/FlythroughAsteroid_1.blend" id="4_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://bqwf3ssupqq8p" path="res://asteroid_multi_mesh.tscn" id="5_ioo17"]
 [ext_resource type="Texture2D" uid="uid://wwnrbmu8uv30" path="res://models/map/SpacePanoramas/panorama1.jpg" id="6_xqmi7"]
 [ext_resource type="Script" uid="uid://bog0im36qiow1" path="res://Multiplayer.gd" id="7_wq8ev"]
 
@@ -18,11 +20,30 @@ sky_material = SubResource("PanoramaSkyMaterial_k8jvc")
 background_mode = 2
 sky = SubResource("Sky_rxvfn")
 glow_enabled = true
-glow_intensity = 1.48
-glow_strength = 0.73
-glow_bloom = 0.65
-glow_blend_mode = 0
+glow_intensity = 1.58
+glow_strength = 0.29
+glow_bloom = 1.0
+glow_blend_mode = 1
+fog_mode = 1
+fog_light_color = Color(3.18866e-07, 0.250822, 0.03924, 1)
+fog_density = 0.6471
+fog_aerial_perspective = 0.382
+fog_sky_affect = 0.044
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.008
+volumetric_fog_albedo = Color(0.431048, 0.608384, 0.463363, 1)
+volumetric_fog_emission = Color(0.176419, 0.176419, 0.176419, 1)
+volumetric_fog_anisotropy = 0.43
+volumetric_fog_length = 167.73
+volumetric_fog_detail_spread = 0.5
 adjustment_enabled = true
+adjustment_contrast = 1.94
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ioo17"]
+auto_exposure_enabled = true
+auto_exposure_scale = 0.2
+auto_exposure_speed = 5.0
+auto_exposure_max_sensitivity = 5391.4
 
 [node name="Game" type="Node3D"]
 
@@ -33,17 +54,26 @@ transform = Transform3D(11.145, 0, 0, 0, 11.145, 0, 0, 0, 11.145, 0, 0, 81.4621)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 0, 16.1784, 9.92091)
+shadow_enabled = true
 
 [node name="Asteroid Particle System" parent="Map" instance=ExtResource("3_pkg7o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 131.819)
+
+[node name="Asteroid Particle System2" parent="Map" instance=ExtResource("3_gbfbk")]
 visible = false
 
-[node name="Asteroid Particle System Ring" parent="Map" instance=ExtResource("3_gbfbk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 77.0848)
+[node name="FlythroughAsteroid_1" parent="Map" instance=ExtResource("4_gbfbk")]
+transform = Transform3D(1.62233, 0, 0, 0, 1.62233, 0, 0, 0, 1.62233, 0, 0, -60.3414)
+
+[node name="StaticBody3D" parent="Map/FlythroughAsteroid_1/Flythrough asteroid 1" index="0"]
 visible = false
+
+[node name="Asteroid Multi Mesh" parent="Map" instance=ExtResource("5_ioo17")]
+transform = Transform3D(54.3096, 0, 0, 0, 54.3096, 0, 0, 0, 54.3096, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rdi8r")
+camera_attributes = SubResource("CameraAttributesPractical_ioo17")
 
 [node name="Multiplayer" type="Node3D" parent="."]
 script = ExtResource("7_wq8ev")
@@ -58,3 +88,5 @@ spawn_path = NodePath("..")
 [connection signal="createServer" from="Hud" to="Multiplayer" method="_on_hud_create_server"]
 [connection signal="createServer" from="Hud" to="Hud" method="_on_create_server"]
 [connection signal="joinServer" from="Hud" to="Multiplayer" method="_on_hud_join_server"]
+
+[editable path="Map/FlythroughAsteroid_1"]
