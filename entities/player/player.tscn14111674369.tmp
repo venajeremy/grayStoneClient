@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://br75wkwv1hj7w"]
+[gd_scene load_steps=16 format=3 uid="uid://br75wkwv1hj7w"]
 
 [ext_resource type="PackedScene" uid="uid://bq1le8ct280eo" path="res://models/Blender Files/Wasp Ship_LIVE.blend" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://buu1yrppqebwp" path="res://entities/player/player.gd" id="2_sfmbk"]
@@ -73,28 +73,9 @@ tracks/0/keys = {
 }
 tracks/0/use_blend = true
 
-[sub_resource type="Animation" id="Animation_8fjmc"]
-resource_name = "strike"
-tracks/0/type = "audio"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../shipAudio/UIAudio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("5_8fjmc")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/0/use_blend = true
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_26q78"]
 _data = {
-&"new_animation": SubResource("Animation_qiwj3"),
-&"strike": SubResource("Animation_8fjmc")
+&"new_animation": SubResource("Animation_qiwj3")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lbe2d"]

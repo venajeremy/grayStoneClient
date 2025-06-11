@@ -4,16 +4,20 @@ signal joinServerStatus(res)
 signal joinServerSuccess()
 signal createServerStatus(res)
 signal createServerSuccess()
+signal clientDisconnected()
 
 @export var player_scene: PackedScene
 @onready var peer = ENetMultiplayerPeer.new()
 
 func _ready():
 	#multiplayer.peer_connected.connect(_on_player_connected)
-	#multiplayer.peer_disconnected.connect(_on_player_disconnected)
+	multiplayer.peer_disconnected.connect(_on_player_disconnected)
 	multiplayer.connected_to_server.connect(_on_connected_ok)
 	multiplayer.connection_failed.connect(_on_connected_fail)
-	#multiplayer.server_disconnected.connect(_on_server_disconnected)
+	multiplayer.server_disconnected.connect(_on_server_disconnected)
+
+func _on_player_disconnected(id):
+	multiplayer
 
 func _on_hud_create_server(port = 9999):
 	print("Creating Server On Port: "+str(port))
@@ -54,7 +58,11 @@ func _del_player(id):
 	get_node(str(id)).queue_free()
 
 func _on_connected_ok():
-	joinServerSuccess.emit("Successfully Joined Server!")
+	joinServerSuccess.emit()
+
+func _on_server_disconnected():
+	clientDisconnected.emit()
+	
 
 func _on_connected_fail():
 	peer.close()

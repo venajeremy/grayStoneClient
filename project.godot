@@ -24,6 +24,10 @@ PacketHandshake="*res://addons/netfox.noray/packet-handshake.gd"
 
 enabled=PackedStringArray("res://addons/netfox.internals/plugin.cfg", "res://addons/netfox.noray/plugin.cfg")
 
+[global_group]
+
+target=""
+
 [input]
 
 w={
@@ -105,3 +109,4 @@ esc={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=2

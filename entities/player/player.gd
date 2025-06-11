@@ -1,15 +1,21 @@
 extends CharacterBody3D
 
 # Ship Parameters
+# Movement
 const speed = 400
 const accelerationDecayRate = 3
 const velocityCap = 700
 const accelerationCap = 100
 const straifeMultiplier = 0.75
-
-const thrusterBoostSpeed = 100
+# BurstThruster
+const thrusterBoostSpeed = 175
+# Mouse
 const sensitivity = -0.04
 const rotationSensitivity = -5
+# Weapons
+const basicLaserDamage = 10
+# Health
+const maxHealth = 100
 
 
 # Physics Variables 
@@ -27,10 +33,14 @@ var utilitySide = [null, null]
 var utilityPositions = [utilityBack, utilityFront, utilitySide]
 
 # Ship Components
+@onready var aimRay = $AimRay
 @onready var cam = $Camera3D
 @onready var guns = $Guns.get_children()
 var gunSelected = 0
 @onready var gunCount = guns.size()
+
+# Health
+@onready var health = maxHealth
 
 # UI
 @onready var shipUI = $ShipUi
@@ -38,9 +48,11 @@ var gunSelected = 0
 # Animations
 @onready var gunAnim = $Animations/Gun
 @onready var thrusterAnim = $Animations/Thruster
+@onready var hitAnim = $Animations/Hit
 
 # Sounds
 @onready var shipAudio = $shipAudio
+
 # Gun Sounds
 const laser1 = preload("res://audio/wasp/gun/gun1.wav")
 const laser2 = preload("res://audio/wasp/gun/gun2.wav")
@@ -61,6 +73,11 @@ func _ready():
 	
 	# Setup Multiplayer Control - This doesn't seem competitively safe
 	cam.current = is_multiplayer_authority()
+	shipUI.visible = is_multiplayer_authority()
+	shipUI.Health.max_value = maxHealth
+	shipUI.Health.value = health
+	
+	
 	
 	# Window Mouse Mode
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -101,13 +118,12 @@ func _physics_process(delta):
 	if Input.is_action_pressed("lmb"):
 		_fire.rpc()
 	if Input.is_action_pressed("esc"):
-		$"../".exit_game(name.to_int())
-		get_tree().quit()
+		exit()
 	
 	
-	# Soft Acceleration cap
+	# Soft Acceleration cap (space friction)
 	if(acceleration.length() > accelerationCap):
-		acceleration = acceleration/(accelerationDecayRate*delta);
+		acceleration = acceleration - (accelerationDecayRate*(acceleration/acceleration.length()));
 	
 	# Hard Velocity cap
 	velocity += acceleration
@@ -118,6 +134,10 @@ func _physics_process(delta):
 	_recharge_all_utilities(delta)
 	
 	move_and_slide()
+
+func exit():
+	$"../".exit_game(name.to_int())
+	get_tree().quit()
 
 # Manages ship utility actions
 func _handle_utility(utilityUsed):
@@ -132,7 +152,7 @@ func _handle_utility(utilityUsed):
 				utilityUsed.currentCharge -= 1.0/utilityUsed.useCount
 				
 				# Apply thruster boost
-				acceleration = -thrusterBoostSpeed*transform.basis.z
+				acceleration = -1.0*thrusterBoostSpeed*transform.basis.z
 
 # Manages recharging all ship utilities
 func _recharge_all_utilities(delta):
@@ -159,7 +179,13 @@ func _play_sound(sound):
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _fire():
-	pass
+	if !gunAnim.is_playing():
+			# Play Animation
+			gunAnim.play("shoot")
+			if aimRay.is_colliding():
+				if aimRay.get_collider().is_in_group("target"):
+					hitAnim.play("strike")
+					aimRay.get_collider().hit(basicLaserDamage)
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _fire_bullet():
@@ -185,3 +211,14 @@ func _fire_bullet():
 				gunSelected=0;
 			
 			get_parent().add_child(instance, true)
+
+func hit(damage):
+	health -= damage
+	shipUI.Health.value = health
+	if(health <= 0):
+		die()
+
+func die():
+	exit()
+	
+	

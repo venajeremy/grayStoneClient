@@ -28,9 +28,31 @@ grow_vertical = 2
 texture = ExtResource("1_g5b62")
 stretch_mode = 2
 
-[node name="utilityUI1" type="ProgressBar" parent="."]
+[node name="Utility1" type="Label" parent="."]
 layout_mode = 0
-offset_left = 28.0
-offset_top = 586.0
-offset_right = 231.0
-offset_bottom = 635.0
+offset_left = 72.0
+offset_top = 559.0
+offset_right = 185.0
+offset_bottom = 582.0
+text = "Burst Thruster"
+
+[node name="Utility1" type="ProgressBar" parent="Utility1"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 27.0
+offset_right = 159.0
+offset_bottom = 76.0
+
+[node name="Health" type="Label" parent="."]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 559.0
+offset_right = 988.0
+offset_bottom = 582.0
+text = "Health"
+
+[node name="Health" type="ProgressBar" parent="Health"]
+offset_left = -75.0
+offset_top = 27.0
+offset_right = 128.0
+offset_bottom = 76.0

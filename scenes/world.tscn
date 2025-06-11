@@ -51,6 +51,7 @@ offset_top = -4.0
 offset_right = 1110.0
 offset_bottom = 603.0
 
+[connection signal="clientDisconnected" from="Multiplayer" to="User Interface" method="_on_multiplayer_client_disconnected"]
 [connection signal="createServerStatus" from="Multiplayer" to="User Interface" method="_on_multiplayer_create_server_status"]
 [connection signal="createServerSuccess" from="Multiplayer" to="User Interface" method="_on_multiplayer_create_server_success"]
 [connection signal="joinServerStatus" from="Multiplayer" to="User Interface" method="_on_multiplayer_join_server_status"]
