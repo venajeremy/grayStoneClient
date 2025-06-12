@@ -1,11 +1,11 @@
 [gd_scene load_steps=17 format=3 uid="uid://br75wkwv1hj7w"]
 
-[ext_resource type="PackedScene" uid="uid://bq1le8ct280eo" path="res://models/Blender Files/Wasp Ship_LIVE.blend" id="2_onrkg"]
 [ext_resource type="Script" uid="uid://buu1yrppqebwp" path="res://entities/player/player.gd" id="2_sfmbk"]
 [ext_resource type="AudioStream" uid="uid://cf67mqd0tpl05" path="res://audio/wasp/movement/burstThrust.wav" id="3_bls4j"]
 [ext_resource type="AudioStream" uid="uid://poaxgmh01bmj" path="res://audio/wasp/gun/gun3.wav" id="3_fkugw"]
 [ext_resource type="PackedScene" uid="uid://cb7wxf8f6fbc" path="res://ui/ship_ui.tscn" id="3_sglur"]
 [ext_resource type="AudioStream" uid="uid://cfrqyqj4m7mo3" path="res://audio/wasp/damage/strike.wav" id="5_8fjmc"]
+[ext_resource type="ArrayMesh" uid="uid://dn02mhtyvkc73" path="res://models/Blender Files/Wasp Ship_LIVE.obj" id="6_8fjmc"]
 
 [sub_resource type="Animation" id="Animation_k14q1"]
 resource_name = "shoot"
@@ -115,9 +115,6 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("2_sfmbk")
 
-[node name="Wasp Ship_LIVE" parent="." instance=ExtResource("2_onrkg")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-
 [node name="Animations" type="Node" parent="."]
 
 [node name="Gun" type="AnimationPlayer" parent="Animations"]
@@ -184,3 +181,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312106, -18.9351)
 target_position = Vector3(0, 0, -100000)
 collision_mask = 2
 collide_with_areas = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = ExtResource("6_8fjmc")

@@ -1,0 +1,1296 @@
+# Blender 4.2.0 MTL File: 'Wasp Ship_LIVE.blend'
+# www.blender.org
+
+newmtl material_1
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_1_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_1_ng.png
+
+newmtl material_10
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_100
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_100_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_100_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ng.png
+
+newmtl material_101
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_101_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_101_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ng.png
+
+newmtl material_102
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_102_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_102_ng.png
+
+newmtl material_103
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_103_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_103_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_103_ng.png
+
+newmtl material_104
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_104_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ng.png
+
+newmtl material_105
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_105_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_106
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_106_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_106_ng.png
+
+newmtl material_107
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_107_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_107_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_45_ng.png
+
+newmtl material_108
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_108_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_108_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_108_ng.png
+
+newmtl material_109
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_109_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_11
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_110
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_110_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_110_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_111
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_111_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_111_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_41_ng.png
+
+newmtl material_112
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_112_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_112_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_39_ng.png
+
+newmtl material_113
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_113_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_113_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_114
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_114_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_114_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_38_ng.png
+
+newmtl material_115
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_115_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_116
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_116_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_117
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_117_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_13_ng.png
+
+newmtl material_118
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_118_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_12
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_12_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_13
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_13_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_13_ng.png
+
+newmtl material_14
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_15
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_15_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_16
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_16_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_16_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_17
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_17_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_17_ng.png
+
+newmtl material_18
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_18_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_18_ng.png
+
+newmtl material_19
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_19_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_2
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+
+newmtl material_20
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_20_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_21
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_21_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_21_ng.png
+
+newmtl material_22
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_22_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_22_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_23
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_23_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_24
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_24_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_13_ng.png
+
+newmtl material_25
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_25_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_26
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ng.png
+
+newmtl material_27
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_27_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_28
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_28_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_13_ng.png
+
+newmtl material_29
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_29_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_3
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_3_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_3_ng.png
+
+newmtl material_30
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_30_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_31
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_31_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_17_ng.png
+
+newmtl material_32
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_32_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_32_ng.png
+
+newmtl material_33
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_33_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_33_ng.png
+
+newmtl material_34
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_34_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_35
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_35_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_35_ng.png
+
+newmtl material_36
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_36_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_36_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_37
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_37_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_37_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_38
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_38_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_38_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_38_ng.png
+
+newmtl material_39
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_39_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_39_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_39_ng.png
+
+newmtl material_4
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_4_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_4_ng.png
+
+newmtl material_40
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_40_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_40_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_40_ng.png
+
+newmtl material_41
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_41_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_41_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_41_ng.png
+
+newmtl material_42
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_42_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_42_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_42_ng.png
+
+newmtl material_43
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_43_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_21_ng.png
+
+newmtl material_44
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_44_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_35_ng.png
+
+newmtl material_45
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_45_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_45_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_45_ng.png
+
+newmtl material_46
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_46_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_46_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_47
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_47_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_9_ng.png
+
+newmtl material_48
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_48_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_48_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_49
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_49_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_5
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_5_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_1_ng.png
+
+newmtl material_50
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_50_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_50_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_38_ng.png
+
+newmtl material_51
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_51_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_51_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_39_ng.png
+
+newmtl material_52
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_52_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_52_ng.png
+
+newmtl material_53
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_53_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_53_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_40_ng.png
+
+newmtl material_54
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_54_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_54_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_55
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_55_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ng.png
+
+newmtl material_56
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_56_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_52_ng.png
+
+newmtl material_57
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ng.png
+
+newmtl material_58
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_58_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_58_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ng.png
+
+newmtl material_59
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_59_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_59_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_59_ng.png
+
+newmtl material_6
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_6_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_2_ng.png
+
+newmtl material_60
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_60_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_60_ng.png
+
+newmtl material_61
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_61_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ng.png
+
+newmtl material_62
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.900000 0.900000 0.900000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.350000
+illum 9
+
+newmtl material_63
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_63_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_63_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_41_ng.png
+
+newmtl material_64
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_64_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ng.png
+
+newmtl material_65
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_65_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_66
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_66_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_66_ng.png
+
+newmtl material_67
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_67_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_67_ng.png
+
+newmtl material_68
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_68_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_68_ng.png
+
+newmtl material_69
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_69_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_7
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_7_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_4_ng.png
+
+newmtl material_70
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_70_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_70_ng.png
+
+newmtl material_71
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_71_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_72
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_72_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_72_ng.png
+
+newmtl material_73
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_73_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_73_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_42_ng.png
+
+newmtl material_74
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_74_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_74_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_74_ng.png
+
+newmtl material_75
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_75_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_75_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_75_ng.png
+
+newmtl material_76
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.900000 0.900000 0.900000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.350000
+illum 9
+
+newmtl material_77
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_77_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_77_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_42_ng.png
+
+newmtl material_78
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.900000 0.900000 0.900000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 0.350000
+illum 9
+
+newmtl material_79
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_79_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_26_ng.png
+
+newmtl material_8
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_8_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_3_ng.png
+
+newmtl material_80
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_80_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_80_ng.png
+
+newmtl material_81
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_81_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_80_ng.png
+
+newmtl material_82
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_82_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_82_ng.png
+
+newmtl material_83
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_83_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_82_ng.png
+
+newmtl material_84
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_84_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_84_ng.png
+
+newmtl material_85
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_85_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_85_ng.png
+
+newmtl material_86
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_86_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_86_ng.png
+
+newmtl material_87
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_87_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_88
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_88_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_88_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_89
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_89_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_89_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_41_ng.png
+
+newmtl material_9
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_9_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_9_ng.png
+
+newmtl material_90
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_90_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_90_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_39_ng.png
+
+newmtl material_91
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_91_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_91_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_10_ng.png
+
+newmtl material_92
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_92_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_92_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_38_ng.png
+
+newmtl material_93
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_93_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_94
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_94_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_11_ng.png
+
+newmtl material_95
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_95_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_13_ng.png
+
+newmtl material_96
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_96_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_97
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_97_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_14_ng.png
+
+newmtl material_98
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_98_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_60_ng.png
+
+newmtl material_99
+Ns 94.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 9
+map_Kd C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_99_ca.png
+map_d C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_99_ca.png
+map_Bump C:/Users/Admin/OneDrive/Desktop/SpaceEngineers_ExportedModels/UPOE_Heavy_Police_Craft/UPOE_Heavy_Police_Craft_objFiles/material_57_ng.png
