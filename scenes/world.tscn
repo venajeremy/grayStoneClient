@@ -27,6 +27,10 @@ astroid_scene = ExtResource("2_i7141")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 0.478814, 0.877916, 0, -0.877916, 0.478814, 0, 16.1784, 9.92091)
 
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Map"]
+_spawnable_scenes = PackedStringArray("uid://x3nf8sfi5bmx")
+spawn_path = NodePath("..")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_rdi8r")
 
@@ -35,7 +39,7 @@ script = ExtResource("4_7r4gi")
 player_scene = ExtResource("5_w7kh3")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="Multiplayer"]
-_spawnable_scenes = PackedStringArray("uid://br75wkwv1hj7w")
+_spawnable_scenes = PackedStringArray("uid://br75wkwv1hj7w", "uid://x3nf8sfi5bmx")
 spawn_path = NodePath("..")
 
 [node name="User Interface" type="Control" parent="."]
@@ -53,6 +57,7 @@ offset_bottom = 603.0
 
 [connection signal="clientDisconnected" from="Multiplayer" to="User Interface" method="_on_multiplayer_client_disconnected"]
 [connection signal="createServerStatus" from="Multiplayer" to="User Interface" method="_on_multiplayer_create_server_status"]
+[connection signal="createServerSuccess" from="Multiplayer" to="Map" method="_on_multiplayer_create_server_success"]
 [connection signal="createServerSuccess" from="Multiplayer" to="User Interface" method="_on_multiplayer_create_server_success"]
 [connection signal="joinServerStatus" from="Multiplayer" to="User Interface" method="_on_multiplayer_join_server_status"]
 [connection signal="joinServerSuccess" from="Multiplayer" to="User Interface" method="_on_multiplayer_join_server_success"]

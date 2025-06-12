@@ -52,6 +52,7 @@ offset_bottom = 582.0
 text = "Health"
 
 [node name="Health" type="ProgressBar" parent="Health"]
+layout_mode = 0
 offset_left = -75.0
 offset_top = 27.0
 offset_right = 128.0

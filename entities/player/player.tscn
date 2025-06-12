@@ -111,8 +111,8 @@ properties/1/spawn = true
 properties/1/replication_mode = 1
 
 [node name="Wasp" type="CharacterBody3D" groups=["target"]]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("2_sfmbk")
 
 [node name="Wasp Ship_LIVE" parent="." instance=ExtResource("2_onrkg")]

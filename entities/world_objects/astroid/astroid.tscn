@@ -7,7 +7,7 @@
 radius = 2.49146
 height = 7.37409
 
-[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_ihboo"]
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_by1ue"]
 properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
@@ -29,7 +29,7 @@ script = ExtResource("1_s23vg")
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_jwtin")
 
-[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
-replication_config = SubResource("SceneReplicationConfig_ihboo")
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_by1ue")

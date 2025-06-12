@@ -10,14 +10,17 @@ signal clientDisconnected()
 @onready var peer = ENetMultiplayerPeer.new()
 
 func _ready():
-	#multiplayer.peer_connected.connect(_on_player_connected)
+	multiplayer.peer_connected.connect(_on_player_connected)
 	multiplayer.peer_disconnected.connect(_on_player_disconnected)
 	multiplayer.connected_to_server.connect(_on_connected_ok)
 	multiplayer.connection_failed.connect(_on_connected_fail)
 	multiplayer.server_disconnected.connect(_on_server_disconnected)
 
-func _on_player_disconnected(id):
-	multiplayer
+func _on_player_connected(_id):
+	pass
+
+func _on_player_disconnected(_id):
+	pass
 
 func _on_hud_create_server(port = 9999):
 	print("Creating Server On Port: "+str(port))
