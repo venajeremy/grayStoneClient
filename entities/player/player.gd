@@ -212,6 +212,7 @@ func _fire_bullet():
 			
 			get_parent().add_child(instance, true)
 
+@rpc("any_peer", "call_local", "reliable", 0)
 func hit(damage):
 	health -= damage
 	shipUI.Health.value = health
