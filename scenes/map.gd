@@ -1,7 +1,7 @@
 extends Node3D
 
-const astroidCount = 10
-const spawnRadius = 2000
+const astroidCount = 1
+const spawnRadius = 200
 const spawnHeightRange = 20
 @export var astroid_scene: PackedScene
 
@@ -10,7 +10,7 @@ func _initialize_world():
 	# Spawn Astroid Belt
 	for i in astroidCount:
 		var instance = astroid_scene.instantiate()
-		instance.position = Vector3(randi()%spawnRadius, randi()%spawnHeightRange, randi()%spawnRadius)
+		instance.position = Vector3(200+randi()%spawnRadius, randi()%spawnHeightRange, randi()%spawnRadius)
 		instance.name = "astroid"+str(i)
 		call_deferred("add_child",instance)
 

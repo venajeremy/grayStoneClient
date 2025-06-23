@@ -86,6 +86,9 @@ func _ready():
 	utilityBack[0] = burstThruster
 
 func _input(event):
+	if !is_multiplayer_authority():
+		return
+	
 	if event is InputEventMouseMotion:
 		rotate_object_local(Vector3(0,1,0),deg_to_rad(event.relative.x * sensitivity))
 		rotate_object_local(Vector3(1,0,0),deg_to_rad(event.relative.y * sensitivity))
@@ -116,7 +119,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("e"):
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(rotationSensitivity))
 	if Input.is_action_pressed("lmb"):
-		_fire.rpc()
+		_fire_server.rpc(basicLaserDamage)
 	if Input.is_action_pressed("esc"):
 		exit()
 	
@@ -177,15 +180,21 @@ func _play_sound(sound):
 			player.play()
 			break
 
-@rpc("any_peer", "call_local", "reliable", 0)
-func _fire():
+func _fire(damage):
 	if !gunAnim.is_playing():
 			# Play Animation
 			gunAnim.play("shoot")
-			if aimRay.is_colliding():
-				if aimRay.get_collider().is_in_group("target"):
-					hitAnim.play("strike")
-					aimRay.get_collider().hit(basicLaserDamage)
+			
+			
+
+@rpc("any_peer", "call_remote", "reliable", 0)
+func _fire_server(damage):
+	if aimRay.is_colliding():
+		if aimRay.get_collider().is_in_group("target"):
+			aimRay.get_collider().hit(damage)
+			return true
+		return false
+	return false
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _fire_bullet():

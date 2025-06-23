@@ -1,14 +1,39 @@
 extends CharacterBody3D
 
-var rotationSpeed = 50
-#((randi()%75)/75.0)*PI
+var syncPosition
+var syncRotation
+
 var movementSpeed = 100
-#randi()%100
-var rotationConstant = Vector3(((randi()%rotationSpeed)/75.0)*PI,((randi()%rotationSpeed)/75.0)*PI,((randi()%rotationSpeed)/75.0)*PI)
+var rotationSpeed
+var rotationAxis
 
 func _ready():
-	velocity = Vector3(0,0,-movementSpeed)
+	if multiplayer.is_server():
+		velocity = Vector3(0,0,-movementSpeed)
+		rotationSpeed = randi()%50
+		rotationAxis = Vector3(randi(),randi(),randi()).normalized()
 
+func _process(delta):
+	pass
+	
 func _physics_process(delta):
-	rotation += rotationConstant*delta
+	rotate(rotationAxis, deg_to_rad(rotationSpeed)*delta)
 	move_and_slide()
+	if multiplayer.is_server():
+		syncPosition = position
+		syncRotation = transform.basis
+	else:
+		if abs(position.length()-syncPosition.length()) > 2: # Motion desync
+			position = syncPosition
+		if _beyond_rotation_desync_limit(0.1): # Rotation desync
+			print("hit")
+			transform.basis = syncRotation
+
+func _beyond_rotation_desync_limit(desyncLimit):
+	if(transform.basis.x.normalized().cross(syncRotation.x.normalized()).length() > desyncLimit):
+		return true
+	if(transform.basis.y.normalized().cross(syncRotation.y.normalized()).length() > desyncLimit):
+		return true
+	if(transform.basis.z.normalized().cross(syncRotation.z.normalized()).length() > desyncLimit):
+		return true
+	return false

@@ -8,21 +8,12 @@ radius = 2.49146
 height = 7.37409
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_by1ue"]
-properties/0/path = NodePath(".:velocity")
+properties/0/path = NodePath(".:position")
 properties/0/spawn = true
 properties/0/replication_mode = 1
-properties/1/path = NodePath(".:syncPosition")
+properties/1/path = NodePath(".:rotation")
 properties/1/spawn = true
 properties/1/replication_mode = 1
-properties/2/path = NodePath(".:syncRotation")
-properties/2/spawn = true
-properties/2/replication_mode = 1
-properties/3/path = NodePath(".:rotationAxis")
-properties/3/spawn = true
-properties/3/replication_mode = 1
-properties/4/path = NodePath(".:rotationSpeed")
-properties/4/spawn = true
-properties/4/replication_mode = 1
 
 [node name="Astroid" type="CharacterBody3D"]
 transform = Transform3D(15.275, 0, 0, 0, 15.275, 0, 0, 0, 15.275, 0, 0, 0)
@@ -42,4 +33,3 @@ shape = SubResource("CapsuleShape3D_jwtin")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_by1ue")
-visibility_update_mode = 1
