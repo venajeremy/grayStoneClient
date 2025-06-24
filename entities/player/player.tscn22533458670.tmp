@@ -115,9 +115,6 @@ properties/2/replication_mode = 1
 properties/0/path = NodePath(".:syncInput")
 properties/0/spawn = true
 properties/0/replication_mode = 1
-properties/1/path = NodePath(".:rotation")
-properties/1/spawn = true
-properties/1/replication_mode = 1
 
 [node name="Wasp" type="CharacterBody3D" groups=["target"]]
 collision_layer = 3

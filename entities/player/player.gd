@@ -8,8 +8,8 @@ const velocityCap = 700
 const accelerationCap = 100
 const straifeMultiplier = 0.75
 # BurstThruster
-const thrusterBoostSpeed = 175
-# Mouse
+const thrusterBoostSpeed = 400
+# Mousesssssa
 const sensitivity = -0.04
 const rotationSensitivity = -5
 # Weapons
@@ -17,6 +17,12 @@ const basicLaserDamage = 10
 # Health
 const maxHealth = 100
 
+# Server Input Array
+var syncInput = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+
+# Server Sync Variables
+var syncPosition = Vector3()
+var syncRotation = Vector3()
 
 # Physics Variables 
 var acceleration = Vector3()
@@ -66,18 +72,16 @@ var bullet = load("res://entities/weapon_projectiles/basic_bullet/bullet.tscn")
 var instance
 
 func _enter_tree():
-	set_multiplayer_authority(name.to_int(), true)
+	$PeerInputSync.set_multiplayer_authority(name.to_int())
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
 	# Setup Multiplayer Control - This doesn't seem competitively safe
-	cam.current = is_multiplayer_authority()
-	shipUI.visible = is_multiplayer_authority()
+	cam.current = $PeerInputSync.is_multiplayer_authority()
+	shipUI.visible = $PeerInputSync.is_multiplayer_authority()
 	shipUI.Health.max_value = maxHealth
 	shipUI.Health.value = health
-	
-	
 	
 	# Window Mouse Mode
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -86,7 +90,7 @@ func _ready():
 	utilityBack[0] = burstThruster
 
 func _input(event):
-	if !is_multiplayer_authority():
+	if !$PeerInputSync.is_multiplayer_authority():
 		return
 	
 	if event is InputEventMouseMotion:
@@ -95,32 +99,45 @@ func _input(event):
 
 
 func _physics_process(delta):
-	if !is_multiplayer_authority():
-		return
+	# Sends player input to the server
+	if $PeerInputSync.is_multiplayer_authority():
+		syncInput = [Input.is_action_pressed("w"),
+		Input.is_action_pressed("s"),
+		Input.is_action_pressed("d"),
+		Input.is_action_pressed("a"),
+		Input.is_action_pressed("space"),
+		Input.is_action_pressed("ctrl"),
+		Input.is_action_pressed("shift"),
+		Input.is_action_pressed("q"),
+		Input.is_action_pressed("e"),
+		Input.is_action_pressed("lmb"),
+		Input.is_action_pressed("esc")]
+	
+	# Client will handle its own physics calculations which are updated if stray too far from server's calculation
 	
 	acceleration = Vector3(0,0,0)
 	# Handle input
-	if Input.is_action_pressed("w"):
+	if syncInput[0]:
 		acceleration += -speed*transform.basis.z * delta
-	if Input.is_action_pressed("s"):
+	if syncInput[1]:
 		acceleration += speed*transform.basis.z * delta
-	if Input.is_action_pressed("d"):
+	if syncInput[2]:
 		acceleration += straifeMultiplier*speed*transform.basis.x * delta
-	if Input.is_action_pressed("a"):
+	if syncInput[3]:
 		acceleration += -straifeMultiplier*speed*transform.basis.x * delta
-	if Input.is_action_pressed("space"):
+	if syncInput[4]:
 		acceleration += straifeMultiplier*speed*transform.basis.y * delta
-	if Input.is_action_pressed("ctrl"):
+	if syncInput[5]:
 		acceleration += -straifeMultiplier*speed*transform.basis.y * delta
-	if Input.is_action_pressed("shift"):
+	if syncInput[6]:
 		_handle_utility(utilityBack[0])
-	if Input.is_action_pressed("q"):
+	if syncInput[7]:
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(-rotationSensitivity))
-	if Input.is_action_pressed("e"):
+	if syncInput[8]:
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(rotationSensitivity))
-	if Input.is_action_pressed("lmb"):
+	if syncInput[9]:
 		_fire_server.rpc(basicLaserDamage)
-	if Input.is_action_pressed("esc"):
+	if syncInput[10]:
 		exit()
 	
 	
@@ -137,6 +154,19 @@ func _physics_process(delta):
 	_recharge_all_utilities(delta)
 	
 	move_and_slide()
+	
+	_server_sync()
+
+func _server_sync():
+	if(multiplayer.is_server()):
+		syncPosition = position
+		syncRotation = rotation
+	else:
+		#print("Difference: "+str(abs((position-syncPosition).length())))
+		#print("Limit: "+str(0.5*velocity.length()))
+		if abs((position-syncPosition).length()) > 0.5*velocity.length(): # Motion desync
+			print("hit")
+			position = syncPosition
 
 func exit():
 	$"../".exit_game(name.to_int())
