@@ -9,11 +9,12 @@ const accelerationCap = 100
 const straifeMultiplier = 0.75
 # BurstThruster
 const thrusterBoostSpeed = 400
-# Mousesssssa
+# Mouse
 const sensitivity = -0.04
 const rotationSensitivity = -5
+const zoomSensitivity = 3
 # Weapons
-const basicLaserDamage = 10
+const basicLaserDamage = 20
 # Health
 const maxHealth = 100
 
@@ -21,6 +22,7 @@ const maxHealth = 100
 var syncInput = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
 
 # Server Sync Variables
+var id
 var syncPosition = Vector3()
 var syncRotation = Vector3()
 
@@ -72,7 +74,8 @@ var bullet = load("res://entities/weapon_projectiles/basic_bullet/bullet.tscn")
 var instance
 
 func _enter_tree():
-	$PeerInputSync.set_multiplayer_authority(name.to_int())
+	id = name.to_int()
+	$PeerInputSync.set_multiplayer_authority(id)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -111,7 +114,9 @@ func _physics_process(delta):
 		Input.is_action_pressed("q"),
 		Input.is_action_pressed("e"),
 		Input.is_action_pressed("lmb"),
-		Input.is_action_pressed("esc")]
+		Input.is_action_pressed("esc"),
+		Input.is_action_just_pressed("scrollup"),
+		Input.is_action_just_pressed("scrolldown")]
 	
 	# Client will handle its own physics calculations which are updated if stray too far from server's calculation
 	
@@ -136,9 +141,13 @@ func _physics_process(delta):
 	if syncInput[8]:
 		rotate_object_local(Vector3(0,0,1),deg_to_rad(rotationSensitivity))
 	if syncInput[9]:
-		_fire_server.rpc(basicLaserDamage)
+		_fire_server.rpc(basicLaserDamage, id)
 	if syncInput[10]:
 		exit()
+	if syncInput[11]:
+		cam.fov -= zoomSensitivity
+	if syncInput[12]:
+		cam.fov += zoomSensitivity
 	
 	
 	# Soft Acceleration cap (space friction)
@@ -162,10 +171,8 @@ func _server_sync():
 		syncPosition = position
 		syncRotation = rotation
 	else:
-		#print("Difference: "+str(abs((position-syncPosition).length())))
-		#print("Limit: "+str(0.5*velocity.length()))
 		if abs((position-syncPosition).length()) > 0.5*velocity.length(): # Motion desync
-			print("hit")
+			print("Player Position Desync Correction Made!")
 			position = syncPosition
 
 func exit():
@@ -210,21 +217,34 @@ func _play_sound(sound):
 			player.play()
 			break
 
-func _fire(damage):
-	if !gunAnim.is_playing():
-			# Play Animation
-			gunAnim.play("shoot")
-			
-			
-
 @rpc("any_peer", "call_remote", "reliable", 0)
-func _fire_server(damage):
-	if aimRay.is_colliding():
-		if aimRay.get_collider().is_in_group("target"):
-			aimRay.get_collider().hit(damage)
-			return true
+func _fire_server(damage, shotBy):
+	# Handle on all clients
+	if !gunAnim.is_playing():
+		# Play shoot sound for everyone
+		gunAnim.play("shoot")
+		
+		# Validate hit on server
+		if multiplayer.is_server():
+			if aimRay.is_colliding():
+				if aimRay.get_collider().is_in_group("target"):
+					aimRay.get_collider().hit.rpc(damage, shotBy)
+					return true
+				return false
+			return false
 		return false
-	return false
+
+@rpc("any_peer", "call_local", "reliable", 0)
+func hit(damage, shotBy):
+	if(multiplayer.get_unique_id()==shotBy):
+		hitAnim.play("strike")
+	health -= damage
+	shipUI.Health.value = health
+	if multiplayer.is_server():
+		if(health <= 0):
+			# Call the method in multiplayer to handle killing the player
+			velocity
+			get_parent()._player_death(id, transform, velocity)
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _fire_bullet():
@@ -250,15 +270,3 @@ func _fire_bullet():
 				gunSelected=0;
 			
 			get_parent().add_child(instance, true)
-
-@rpc("any_peer", "call_local", "reliable", 0)
-func hit(damage):
-	health -= damage
-	shipUI.Health.value = health
-	if(health <= 0):
-		die()
-
-func die():
-	exit()
-	
-	

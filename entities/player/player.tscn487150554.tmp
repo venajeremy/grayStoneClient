@@ -57,6 +57,21 @@ _data = {
 
 [sub_resource type="Animation" id="Animation_qiwj3"]
 resource_name = "new_animation"
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../shipAudio/UIAudio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_8fjmc")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
 
 [sub_resource type="Animation" id="Animation_8fjmc"]
 resource_name = "strike"
@@ -163,7 +178,7 @@ volume_db = -7.204
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312106, -6.41058)
 doppler_tracking = 2
-fov = 60.9
+fov = 91.0
 
 [node name="ShipUi" parent="." instance=ExtResource("3_sglur")]
 

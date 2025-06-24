@@ -6,10 +6,14 @@ signal createServerStatus(res)
 signal createServerSuccess()
 signal clientDisconnected()
 
-@export var player_scene: PackedScene
+@export var playerScene: PackedScene
+@export var destructionScene: PackedScene
 @onready var peer = ENetMultiplayerPeer.new()
 
+# Server/Client Setup
+
 func _ready():
+	# Server/Client Signals
 	multiplayer.peer_connected.connect(_on_player_connected)
 	multiplayer.peer_disconnected.connect(_on_player_disconnected)
 	multiplayer.connected_to_server.connect(_on_connected_ok)
@@ -35,7 +39,7 @@ func _on_hud_create_server(port = 9999):
 	createServerSuccess.emit()
 
 func _add_player(id = 1):
-	var player = player_scene.instantiate()
+	var player = playerScene.instantiate()
 	player.name = str(id)
 	call_deferred("add_child",player)
 
@@ -65,8 +69,19 @@ func _on_connected_ok():
 
 func _on_server_disconnected():
 	clientDisconnected.emit()
-	
 
 func _on_connected_fail():
 	peer.close()
 	joinServerStatus.emit("Could Not Connect To Provided IP and Port")
+
+# Hanle Multiplayer Game Loop
+func _player_death(id, transform, velocity):
+	_play_death_animation.rpc(transform, velocity)
+	
+
+@rpc("any_peer", "call_remote", "reliable", 0)
+func _play_death_animation(transform, velocity):
+	var death = destructionScene.instantiate()
+	death.transform.origin = transform.origin
+	death.velocity = velocity
+	call_deferred("add_child",death)
