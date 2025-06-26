@@ -217,7 +217,7 @@ func _play_sound(sound):
 			player.play()
 			break
 
-@rpc("any_peer", "call_remote", "reliable", 0)
+@rpc("any_peer", "call_local", "reliable", 0)
 func _fire_server(damage, shotBy):
 	# Handle on all clients
 	if !gunAnim.is_playing():
