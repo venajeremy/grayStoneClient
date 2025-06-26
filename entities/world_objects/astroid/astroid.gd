@@ -1,24 +1,18 @@
-extends CharacterBody3D
+extends RigidBody3D
 
 var syncPosition
 var syncRotation
 
-var movementSpeed = 100
-var rotationSpeed
-var rotationAxis
+var movementSpeed = 5000
+var rotationSpeed = randi()%1000
+var rotationVector = Vector3(randi(),randi(),randi()).normalized() * rotationSpeed
 
 func _ready():
 	if multiplayer.is_server():
-		velocity = Vector3(0,0,-movementSpeed)
-		rotationSpeed = randi()%50
-		rotationAxis = Vector3(randi(),randi(),randi()).normalized()
+		apply_force(Vector3(0,0,-movementSpeed))
+		apply_torque(rotationVector)
 
-func _process(delta):
-	pass
-	
 func _physics_process(delta):
-	rotate(rotationAxis, deg_to_rad(rotationSpeed)*delta)
-	move_and_slide()
 	if multiplayer.is_server():
 		syncPosition = position
 		syncRotation = transform.basis
