@@ -1,7 +1,8 @@
 extends Node3D
 
-const astroidCount = 100
-const spawnRadius = 5000
+const astroidCount = 50
+const spawnRadius = 2500
+
 const spawnHeightRange = 20
 @export var astroid_scene: PackedScene
 

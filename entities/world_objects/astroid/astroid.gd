@@ -4,11 +4,13 @@ var syncPosition
 var syncRotation
 
 var movementSpeed = 5000
-var rotationSpeed = randi()%1000
-var rotationVector = Vector3(randi(),randi(),randi()).normalized() * rotationSpeed
+var rotationSpeed
+var rotationVector
 
 func _ready():
 	if multiplayer.is_server():
+		rotationSpeed = randi()%1000
+		rotationVector = Vector3(randi(),randi(),randi()).normalized() * rotationSpeed
 		apply_force(Vector3(0,0,-movementSpeed))
 		apply_torque(rotationVector)
 
