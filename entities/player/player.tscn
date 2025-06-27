@@ -18,7 +18,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "clips": [{
-"end_offset": 0.0,
+"end_offset": 0.66,
 "start_offset": 0.0,
 "stream": ExtResource("3_fkugw")
 }],

@@ -75,9 +75,20 @@ func _on_connected_fail():
 	joinServerStatus.emit("Could Not Connect To Provided IP and Port")
 
 # Hanle Multiplayer Game Loop
-func _player_death(id, transform, velocity):
+func _player_death(killedPlayer, transform, velocity):
 	_play_death_animation.rpc(transform, velocity)
+	var id = killedPlayer.id
 	
+	# Remove player
+	
+	call_deferred("remove_child",killedPlayer)
+	killedPlayer.queue_free()
+	
+	# Respawn player
+	
+	var player = playerScene.instantiate()
+	player.name = str(id)
+	call_deferred("add_child",player)
 
 @rpc("any_peer", "call_local", "reliable", 0)
 func _play_death_animation(transform, velocity):
