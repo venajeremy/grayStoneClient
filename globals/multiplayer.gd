@@ -79,7 +79,7 @@ func _player_death(id, transform, velocity):
 	_play_death_animation.rpc(transform, velocity)
 	
 
-@rpc("any_peer", "call_remote", "reliable", 0)
+@rpc("any_peer", "call_local", "reliable", 0)
 func _play_death_animation(transform, velocity):
 	var death = destructionScene.instantiate()
 	death.transform.origin = transform.origin

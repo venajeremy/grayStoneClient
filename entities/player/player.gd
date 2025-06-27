@@ -248,7 +248,6 @@ func hit(damage, shotBy):
 	if multiplayer.is_server():
 		if(health <= 0):
 			# Call the method in multiplayer to handle killing the player
-			velocity
 			get_parent()._player_death(id, transform, velocity)
 
 @rpc("any_peer", "call_local", "reliable", 0)

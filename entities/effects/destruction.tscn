@@ -208,6 +208,7 @@ script = ExtResource("1_1vcgf")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 1.5
+billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_e00k4")
 animation = &"destruction"
