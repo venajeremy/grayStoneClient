@@ -25,6 +25,8 @@ var syncInput = [false,false,false,false,false,false,false,false,false,false,fal
 var id
 var syncPosition = Vector3()
 var syncRotation = Vector3()
+var timeSync = 0
+var ping = 0
 
 # Physics Variables 
 var acceleration = Vector3()
@@ -167,13 +169,16 @@ func _physics_process(delta):
 	_server_sync()
 
 func _server_sync():
+	ping = Time.get_ticks_msec() - timeSync
+	timeSync = Time.get_ticks_msec()
 	if(multiplayer.is_server()):
 		syncPosition = position
 		syncRotation = rotation
 	else:
 		if abs((position-syncPosition).length()) > 0.5*velocity.length(): # Motion desync
-			print("Player Position Desync Correction Made!")
-			position = syncPosition
+			print("Player Position Desync Correction Made!"+str(ping)+", "+str(velocity))
+			#			V position on server + interpolatied position of seconds delay 2000 = ping(ms)*1000 = (s) /2 = time only from server
+			position = syncPosition+(velocity*(ping/(2000)))
 
 func exit():
 	$"../".exit_game(name.to_int())
