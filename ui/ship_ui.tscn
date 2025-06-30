@@ -35,13 +35,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -51.0
-offset_right = -3.0
-offset_bottom = 48.0
+offset_top = -34.0
+offset_right = 48.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.785397
-scale = Vector2(1.5, 1.5)
+rotation = 0.785397
 texture = ExtResource("1_g5b62")
 stretch_mode = 2
 

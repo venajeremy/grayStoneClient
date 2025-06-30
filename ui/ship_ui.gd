@@ -10,5 +10,5 @@ func _ready():
 
 func hit_marker():
 	HitMarker.show()
-	await get_tree().create_timer(0.25).timeout
+	await get_tree().create_timer(0.1).timeout
 	HitMarker.hide()
