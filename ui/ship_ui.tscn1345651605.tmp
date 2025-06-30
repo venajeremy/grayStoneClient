@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb7wxf8f6fbc"]
+
+[ext_resource type="Script" uid="uid://mcge5yd5bicm" path="res://ui/ship_ui.gd" id="1_4ks6e"]
+[ext_resource type="Texture2D" uid="uid://clj74mtsi24bw" path="res://textures/crosshair1.png" id="1_g5b62"]
+
+[node name="ShipUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ks6e")
+
+[node name="Crosshair" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g5b62")
+stretch_mode = 2
+
+[node name="HitCrosshair" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_right = -3.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785397
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_g5b62")
+stretch_mode = 2
+
+[node name="Utility1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 559.0
+offset_right = 185.0
+offset_bottom = 582.0
+text = "Burst Thruster"
+
+[node name="Utility1" type="ProgressBar" parent="Utility1"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 27.0
+offset_right = 159.0
+offset_bottom = 76.0
+
+[node name="Health" type="Label" parent="."]
+layout_mode = 0
+offset_left = 936.0
+offset_top = 559.0
+offset_right = 988.0
+offset_bottom = 582.0
+text = "Health"
+
+[node name="Health" type="ProgressBar" parent="Health"]
+layout_mode = 0
+offset_left = -75.0
+offset_top = 27.0
+offset_right = 128.0
+offset_bottom = 76.0

@@ -175,7 +175,7 @@ func _server_sync():
 		syncPosition = position
 		syncRotation = rotation
 	else:
-		if abs((position-syncPosition).length()) > 0.5*velocity.length(): # Motion desync
+		if abs((position-syncPosition).length()) > 0.1*velocity.length(): # Motion desync
 			print("Player Position Desync Correction Made!"+str(ping)+", "+str(velocity))
 			#			V position on server + interpolatied position of seconds delay 2000 = ping(ms)*1000 = (s) /2 = time only from server
 			position = syncPosition+(velocity*(ping/(2000)))
@@ -234,15 +234,20 @@ func _fire_server(damage, shotBy):
 			if aimRay.is_colliding():
 				if aimRay.get_collider().is_in_group("target"):
 					aimRay.get_collider().hit.rpc(damage, shotBy)
+					shotConnected.rpc(shotBy)
 					return true
 				return false
 			return false
 		return false
 
 @rpc("any_peer", "call_local", "reliable", 0)
-func hit(damage, shotBy):
-	if(multiplayer.get_unique_id()==shotBy):
+func shotConnected(shotBy):
+	if(multiplayer.get_unique_id() == shotBy):
+		shipUI.hit_marker()
 		hitAnim.play("strike")
+
+@rpc("any_peer", "call_local", "reliable", 0)
+func hit(damage, shotBy):
 	health -= damage
 	shipUI.Health.value = health
 	if multiplayer.is_server():

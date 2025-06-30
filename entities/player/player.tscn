@@ -168,10 +168,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312106, -6.41058)
 doppler_tracking = 2
 fov = 60.9
 
-[node name="ShipUi" parent="." instance=ExtResource("3_sglur")]
-
 [node name="AimRay" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.312106, -18.9351)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
 target_position = Vector3(0, 0, -100000)
 collision_mask = 2
 collide_with_areas = true
@@ -185,3 +183,5 @@ replication_config = SubResource("SceneReplicationConfig_8fjmc")
 
 [node name="PeerInputSync" type="MultiplayerSynchronizer" parent="."]
 replication_config = SubResource("SceneReplicationConfig_qiwj3")
+
+[node name="ShipUi" parent="." instance=ExtResource("3_sglur")]

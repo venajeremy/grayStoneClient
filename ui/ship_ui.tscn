@@ -28,6 +28,23 @@ grow_vertical = 2
 texture = ExtResource("1_g5b62")
 stretch_mode = 2
 
+[node name="HitCrosshair" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_right = -3.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.785397
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_g5b62")
+stretch_mode = 2
+
 [node name="Utility1" type="Label" parent="."]
 layout_mode = 0
 offset_left = 72.0
